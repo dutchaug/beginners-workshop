@@ -1,5 +1,4 @@
 # Learning about Activities
----
 
 ## What you'll learn in this lesson
 

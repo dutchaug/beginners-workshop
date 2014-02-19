@@ -1,4 +1,1 @@
-beginners-workshop
-==================
-
-Android Workshop for Beginners
+#Android Workshop for Beginners

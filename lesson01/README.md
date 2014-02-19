@@ -1,5 +1,4 @@
 # Lesson 01 - Exploring your Android development environment
----
 
 ## What you'll learn in this lesson
 
