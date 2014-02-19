@@ -1,4 +1,4 @@
-# Learning about Activities
+# Lesson 02 - Learning about Activities
 
 ## What you'll learn in this lesson
 
@@ -40,7 +40,7 @@ apply plugin: 'hugo'
 
 And than add the `@DebugLog` annotation to any method you want to _debug log_.
 
-A couple of the Activity life cycle methods in [sample01](sample01) are annotated with the `@DebugLog` annotation. Take that project for a spin.
+A couple of the Activity life cycle methods in the [MainActivity](sample01/lifecyclelogger/src/main/java/org/dutchaug/workshop/beginners/lifecyclelogger/MainActivity.java) in [sample01](sample01) are annotated with the `@DebugLog` annotation. Take that project for a spin.
 
 ## Tweaking the Activity
 
