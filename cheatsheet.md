@@ -27,7 +27,9 @@ You can resize your graphical resources with the following ratio table:
 When you create a new project in Android Studio almost all your project files are inside the `src` directory, including resources and the manifest file. For the most part, you should need to modify only the files under the `src` directory. More information about the Gradle project structure is available in the [Gradle Plugin User Guide](http://tools.android.com/tech-docs/new-build-system/user-guide).
 
 ### Keyboard shortcuts
+
 Keymap for Windows/Linux [PDF](http://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard.pdf)
+
 Keymap for Mac OS X [PDF](http://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard_Mac.pdf)
 
 ### Import projects in Android Studio
