@@ -3,7 +3,7 @@
 ## General
 
 ### _Dips_ (dp) and _sips_ (sp)
-You can define view and widths and hights and font sizes using **px**, **dp** or **sp**.
+You can define view widths and hights and font sizes using **px**, **dp** or **sp**.
 
 **px**
 _Pixels_ Corresponds to actual pixels on the screen.
