@@ -8,13 +8,13 @@ You can define view widths and hights and font sizes using **px**, **dp** or **s
 **px**
 _Pixels_ Corresponds to actual pixels on the screen.
 
-**dp or dip**
+**dp** or **dip**
 _Density-independent Pixels_ An abstract unit that is based on the physical density of the screen. These units are relative to a 160 dpi screen, so one dp is one pixel on a 160 dpi screen. The ratio of dp-to-pixel will change with the screen density, but not necessarily in direct proportion. Note: The compiler accepts both "dip" and "dp", though "dp" is more consistent with "sp".
 
-**sp or sip**
+**sp** or **sip**
 _Scale-independent Pixels_ This is like the dp unit, but it is also scaled by the user's font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and user's preference.
 
-Try to never use anything but sp or dp unless you absolutely have to. Using sp/dp will make your Android applications compatible with multiple screen densities and resolutions.
+> **Tip!**: Try to never use anything but sp or dp unless you absolutely have to. Using sp/dp will make your Android applications compatible with multiple screen densities and resolutions.
 
 You can resize your graphical resources with the following ratio table:
 
