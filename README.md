@@ -17,7 +17,7 @@ This workshop is aimed at intermediate Java or OO programmers who want to start 
 
 ## What you _will_ learn in this workshop
 
-* Navigating thourhg the typical Android Studio (Gradle) Project structure
+* Navigating through the typical Android Studio (Gradle) Project structure
 * Importing Android Gradle projects in Android Studio
 * Building and running Android apps on your own device or Android Virtual Device.
 * Working with Activities, and get basic understanding of the Activity Life Cycle
