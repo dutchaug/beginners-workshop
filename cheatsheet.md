@@ -14,7 +14,7 @@ _Density-independent Pixels_ An abstract unit that is based on the physical dens
 **sp** or **sip**
 _Scale-independent Pixels_ This is like the dp unit, but it is also scaled by the user's font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and user's preference.
 
-> **Tip!**: Try to never use anything but sp or dp unless you absolutely have to. Using sp/dp will make your Android applications compatible with multiple screen densities and resolutions.
+> **Tip**: Try to never use anything but sp or dp unless you absolutely have to. Using sp and dp will make your Android applications compatible with multiple screen densities and resolutions.
 
 You can resize your graphical resources with the following ratio table:
 
