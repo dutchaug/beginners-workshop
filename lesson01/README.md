@@ -1,16 +1,19 @@
 # Lesson 01 - Exploring your Android development environment
 
 ## What you'll learn in this lesson
-
-## Android Tools
-
-### SDK Manager
-
-### AVD Manager
-
-### DDMS
+* Creating a new Android project in Android Studio
+* Understand and navigate the basic Android project structure in Android Studio
+  * Learn about the AndroidManifest.xml file
+  * Know where the java source files are located
+  * Understand the basics of resources
+* Know the basics about and how to start the Android Tools from Android Studio
+  * The Android SDK Manager 
+  * The Android Virtual Device (AVD) Manager
+  * The Device Debug Monitoring System (DDMS)
 
 ## Android Studio
+
+### Creating an Android project
 
 ### The Android Project structure
 
@@ -27,4 +30,12 @@
 ##### drawables
 
 ##### layouts
+
+## Android Tools
+
+### SDK Manager
+
+### AVD Manager
+
+### DDMS
 
