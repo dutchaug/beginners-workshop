@@ -2,7 +2,22 @@
 
 ## What you'll learn in this lesson
 
+## Activities
+An activity usually is a full Android screen that a user sees or interacts with. The `onCreate` method you saw in the MainActivity in lesson 1 is what we call a _life cycle callback_ method and this gives you a hook where you can initialize your activity when the Android system decides it is time to show your activity to the user. The [Activity life cycle](http://developer.android.com/reference/android/app/Activity.html#ActivityLifecycle) is very important and deserves good understanding when you are planning to do more Android development after this workshop.
+
 ## The main activity launch intent filter
+Of course an app can contain many screens / activites through which the end user navigates. There is one activity that can be designated as the activity which is shown when the user clicks on your app icon from the launcher. When you install an Android app the Android system needs to know in which ways it can interact with your app. You can define all these hooks in the `AndroidManifest.xml` file which basically describes the interface between your app and the Android operating system.
+
+```xml
+<activity
+        android:label="@string/app_name"
+        android:name=".MainActivity">
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+    </intent-filter>
+</activity>
+```
 
 ## The Activity Life Cycle
 
@@ -43,6 +58,8 @@ And than add the `@DebugLog` annotation to any method you want to _debug log_.
 A couple of the Activity life cycle methods in the [MainActivity](sample01/lifecyclelogger/src/main/java/org/dutchaug/workshop/beginners/lifecyclelogger/MainActivity.java) in [sample01](sample01) are annotated with the `@DebugLog` annotation. Take that project for a spin.
 
 ## Tweaking the Activity
+
+### Change the app icon
 
 ### Change the Activity title
 
