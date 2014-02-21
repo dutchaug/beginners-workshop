@@ -10,6 +10,8 @@
   * The Android SDK Manager 
   * The Android Virtual Device (AVD) Manager
   * The Device Debug Monitoring System (DDMS)
+  
+If you know all about the learning goals for this lesson move on to [lesson 2](../lesson02)
 
 ## Android Studio
 
