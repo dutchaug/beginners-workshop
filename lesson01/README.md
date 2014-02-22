@@ -16,7 +16,7 @@ If you know all about the learning goals for this lesson move on to [lesson 2](.
 ## Android Studio
 
 ### Importing an Android project in Android Studio
-Android Studio contains a new project wizard which is started by chosing **File > New Project...**. However convenient it also poses a lot of questions, settings and steps which might be a bit too much at this point. For this workshop we would like to teach you how to import an existing Android project so we can keep the project contents consise to what is needed in the sample or exercise. In this lesson we are going to import a very tiny "Hello World" app.
+Android Studio contains a new project wizard which is started by chosing **File > New Project...**. However convenient it also poses a lot of questions, settings and steps which might be a bit too overwhelming at this point. For this workshop we would like to teach you how to import an existing Android project so we can keep the project contents consise to what is needed in the sample or exercise. In this lesson we are going to import a very tiny "Hello World" app.
 
 ![The File Menu](img/as-file-menu.png)
 > The File Menu
@@ -32,7 +32,7 @@ In Android Studio, chose **File > Import Project...** or select the **Import Pro
 If all's well Android Studio will start to build your project right away.
 
 ### The Android Project structure
-If you have imported the **sample01** project correctly you will end up with a project structure like this
+If you have imported the **sample01** project successfully you will end up with a project structure like this
 
 ![Typical Android Gradle project structure](img/project-structure.png)
 
@@ -100,15 +100,46 @@ dependencies {
 }
 ```
 
-The `minSdkVersion` version states which Android OS level you minimally support with your app. We have chosen to support version 14 (Android 4.0 - Ice Cream Sandwich) and up in this workshop.
+The **minSdkVersion** version states which Android OS level you minimally support with your app. We have chosen to support version 14 (Android 4.0 - Ice Cream Sandwich) and up in this workshop.
 
-The `targetSdkVersion` informs the system that you have tested against the target version and the system should not enable any compatibility behaviors to maintain your app's forward-compatibility with the target version. The application is still able to run on older versions (down to `minSdkVersion`). To maintain your application along with each Android release, you should increase the value of this attribute to match the latest API level, then thoroughly test your application on the corresponding platform version.
+The **targetSdkVersion** informs the system that you have tested against the target version and the system should not enable any compatibility behaviors to maintain your app's forward-compatibility with the target version. The application is still able to run on older versions (down to **minSdkVersion**). To maintain your application along with each Android release, you should increase the value of this attribute to match the latest API level, then thoroughly test your application on the corresponding platform version.
 
-The `versionCode` is a value which is used mainly for distribution on Google Play. Every update should have a higher version code than the previous package.
+The **versionCode** is a value which is used mainly for distribution on Google Play. Every update should have a higher version code than the previous package.
 
-The `versionName` value is a user-friendly name for the app version and can be any string. This value is visible to the end-users on Google Play.
+The **versionName** value is a user-friendly name for the app version and can be any string. This value is visible to the end-users on Google Play.
 
 #### AndroidManifest.xml
+Every application must have an AndroidManifest.xml file (with precisely that name) in its root directory. The manifest file presents essential information about your app to the Android system, information the system must have before it can run any of the app's code. Among other things, the manifest does the following:
+
+* It names the Java package for the application. The package name serves as a unique identifier for the application.
+* It describes the components of the application and under what conditions they can be launched.
+* It declares which permissions the application must have in order to access protected parts of the API and interact with other applications.
+* It declares the minimum level of the Android API that the application requires.
+
+Let's open up the AndroidManifest.xml file of the helloworld app.
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.dutchaug.workshop.beginners.helloworld" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+```
 
 #### Java source files
 
