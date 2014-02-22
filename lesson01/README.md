@@ -37,7 +37,7 @@ If you have imported the `sample01` project correctly you will end up with a pro
 ![Typical Android Gradle project structure](img/project-structure.png)
 
 #### Gradle build files
-At the root of the project folder you can see various gradle files.
+At the root of the project folder you can see various gradle files. You can use command line tools, Ant, Maven and Gradle to build and package your Android projects. The Android Tools team have chosen [Gradle](http://www.gradle.org/) as the main build system. You can read more about the new build system [here](http://tools.android.com/tech-docs/new-build-system). 
 
 The `build.gradle`, `gradle.properties` and `settings.gradle` files describe how to build the helloworld project.
 
