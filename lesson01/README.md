@@ -78,6 +78,8 @@ Total time: 5.702 secs
 ```
 
 #### The project build.gradle file
+The **build.gradle** file in the helloworld directory is very simple.
+
 ```
 apply plugin: 'android'
 
@@ -97,7 +99,6 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
 }
 ```
-> The `helloworld/build.gradle` file
 
 The `minSdkVersion` version states which Android OS level you minimally support with your app. We have chosen to support version 14 (Android 4.0 - Ice Cream Sandwich) and up in this workshop.
 
