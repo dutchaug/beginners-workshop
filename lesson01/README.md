@@ -46,7 +46,7 @@ At the root of the project folder you can see various gradle files.
 * A `gradlew.bat` batch script for the Windows OS
 * A `settings.gradle` file
 
-#### AndroidManfest.xml
+#### AndroidManifest.xml
 
 #### Java source files
 
@@ -54,11 +54,13 @@ At the root of the project folder you can see various gradle files.
 ![res folder](img/res-folder.png)
 > The Android project resources
 
-##### strings.xml
-
 ##### drawables
 
+##### values
+`strings.xml`
+
 ##### layouts
+`activity_main.xml`
 
 ## Android Tools
 
