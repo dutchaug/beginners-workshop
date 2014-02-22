@@ -39,12 +39,73 @@ If you have imported the `sample01` project correctly you will end up with a pro
 #### Gradle build files
 At the root of the project folder you can see various gradle files.
 
-* A `gradle` directory
-* A `build.gradle` file
-* A `gradle.properties` file
-* A `gradlew` shell script for unix based OS-es
-* A `gradlew.bat` batch script for the Windows OS
-* A `settings.gradle` file
+The `build.gradle`, `gradle.properties` and `settings.gradle` files describe how to build the helloworld project.
+
+* The `settings.gradle` file describes which sub-projects to include. This is only the `helloworld` project folder in our case
+* The `build.gradle` file in the root folder describes the necessary dependencies for the build itself and a common setup for all projects
+* The `helloworld/build.gradle` describes how to build our Android project. It applies an android plugin and describes the configuration.
+
+The `gradlew` and `gradlew.bat` scripts (for unix resp. Windows environments) are gradle _wrapper_ scripts. You can run a build on the command line using this script. It requires a certain Gradle version and if it is not present it downloads the binaries on the fly. The `gradlew` scripts and `gradle` directory are added automatically when you create a project with the Android Studio New Project Wizard and 
+
+```
+sample01> ./gradlew assembleDebug
+:helloworld:compileDebugNdk UP-TO-DATE
+:helloworld:preBuild
+:helloworld:preDebugBuild
+:helloworld:checkDebugManifest
+:helloworld:prepareDebugDependencies
+:helloworld:compileDebugAidl UP-TO-DATE
+:helloworld:compileDebugRenderscript UP-TO-DATE
+:helloworld:generateDebugBuildConfig UP-TO-DATE
+:helloworld:mergeDebugAssets UP-TO-DATE
+:helloworld:generateDebugResValues UP-TO-DATE
+:helloworld:generateDebugResources UP-TO-DATE
+:helloworld:mergeDebugResources UP-TO-DATE
+:helloworld:processDebugManifest UP-TO-DATE
+:helloworld:processDebugResources UP-TO-DATE
+:helloworld:generateDebugSources UP-TO-DATE
+:helloworld:compileDebugJava UP-TO-DATE
+:helloworld:preDexDebug UP-TO-DATE
+:helloworld:dexDebug UP-TO-DATE
+:helloworld:processDebugJavaRes UP-TO-DATE
+:helloworld:validateDebugSigning
+:helloworld:packageDebug UP-TO-DATE
+:helloworld:assembleDebug UP-TO-DATE
+
+BUILD SUCCESSFUL
+
+Total time: 5.702 secs
+```
+
+#### The project build.gradle file
+```
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.0.2"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 19
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+}
+```
+> The `helloworld/build.gradle` file
+
+The `minSdkVersion` version states which Android OS level you minimally support with your app. We have chosen to support version 14 (Android 4.0 - Ice Cream Sandwich) and up in this workshop.
+
+The `targetSdkVersion` informs the system that you have tested against the target version and the system should not enable any compatibility behaviors to maintain your app's forward-compatibility with the target version. The application is still able to run on older versions (down to `minSdkVersion`). To maintain your application along with each Android release, you should increase the value of this attribute to match the latest API level, then thoroughly test your application on the corresponding platform version.
+
+The `versionCode` is a value which is used mainly for distribution on Google Play. Every update should have a higher version code than the previous package.
+
+The `versionName` value is a user-friendly name for the app version and can be any string. This value is visible to the end-users on Google Play.
 
 #### AndroidManifest.xml
 
