@@ -27,19 +27,32 @@ Android Studio contains a new project wizard which is started by chosing **File 
 In Android Studio, chose **File > Import Project...** or select the **Import Project...** option from the quick start menu and select the `sample01` folder. 
 
 ![Select Gradle Project import](img/as-project-import.png)
->Select Gradle Project import
+>Select Gradle Project import. Android Studio may ask you to choose the type of project you are importing. If this is the case, make sure to choose **Import project from external model** and select the **Gradle** option.
 
-Android Studio may ask you to choose the type of project you are importing. If this is the case, make sure to choose **Import project from external model** and select the **Gradle** option.
+If all's well Android Studio will start to build your project right away.
 
 ### The Android Project structure
+If you have imported the `sample01` project correctly you will end up with a project structure like this
+
+![Typical Android Gradle project structure](img/project-structure.png)
 
 #### Gradle build files
+At the root of the project folder you can see various gradle files.
+
+* A `gradle` directory
+* A `build.gradle` file
+* A `gradle.properties` file
+* A `gradlew` shell script for unix based OS-es
+* A `gradlew.bat` batch script for the Windows OS
+* A `settings.gradle` file
 
 #### AndroidManfest.xml
 
 #### Java source files
 
 #### Resources
+![res folder](img/res-folder.png)
+> The Android project resources
 
 ##### strings.xml
 
