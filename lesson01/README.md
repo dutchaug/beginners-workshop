@@ -109,14 +109,7 @@ The **versionCode** is a value which is used mainly for distribution on Google P
 The **versionName** value is a user-friendly name for the app version and can be any string. This value is visible to the end-users on Google Play.
 
 #### AndroidManifest.xml
-Every application must have an AndroidManifest.xml file (with precisely that name) in its root directory. The manifest file presents essential information about your app to the Android system, information the system must have before it can run any of the app's code. Among other things, the manifest does the following:
-
-* It names the Java package for the application. The package name serves as a unique identifier for the application.
-* It describes the components of the application and under what conditions they can be launched.
-* It declares which permissions the application must have in order to access protected parts of the API and interact with other applications.
-* It declares the minimum level of the Android API that the application requires.
-
-Let's open up the AndroidManifest.xml file of the helloworld app.
+Every application must have an AndroidManifest.xml file (with precisely that name) in its root directory. Let's open up the AndroidManifest.xml file of the helloworld app.
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -140,6 +133,15 @@ Let's open up the AndroidManifest.xml file of the helloworld app.
 
 </manifest>
 ```
+
+The manifest file presents essential information about your app to the Android system, information the system must have before it can run any of the app's code. Among other things, the manifest does the following:
+
+* It names the Java **package** for the application. The package name serves as a unique identifier for the application.
+* It describes the components of the application (in our example the activity MainActivity) and under what conditions they can be launched.
+* It declares which permissions the application must have in order to access protected parts of the API and interact with other applications. We don't require any extra permissions in our app, but if you e.g. need internet access, or want to lookup a contact you need to declare those permission here. [More info](http://developer.android.com/reference/android/Manifest.permission.html)
+* It declares the minimum level of the Android API that the application requires. In our case this information is not present in our development AndroidManifest.xml file, but it will be added in the Gradle build, using the information in the **defaultConfig** section in the ./hellworld/build.gradle file.
+
+[More info](http://developer.android.com/guide/topics/manifest/manifest-intro.html)
 
 #### Java source files
 
