@@ -24,7 +24,7 @@ Android Studio contains a new project wizard which is started by chosing **File 
 ![The Quick Start Menu](img/as-quick-start-menu.png)
 >The Quick Start Menu
 
-In Android Studio, chose **File > Import Project...** or select the **Import Project...** option from the quick start menu and select the `sample01` folder. 
+In Android Studio, chose **File > Import Project...** or select the **Import Project...** option from the quick start menu and select the **sample01** folder. 
 
 ![Select Gradle Project import](img/as-project-import.png)
 >Select Gradle Project import. Android Studio may ask you to choose the type of project you are importing. If this is the case, make sure to choose **Import project from external model** and select the **Gradle** option.
@@ -32,20 +32,20 @@ In Android Studio, chose **File > Import Project...** or select the **Import Pro
 If all's well Android Studio will start to build your project right away.
 
 ### The Android Project structure
-If you have imported the `sample01` project correctly you will end up with a project structure like this
+If you have imported the **sample01** project correctly you will end up with a project structure like this
 
 ![Typical Android Gradle project structure](img/project-structure.png)
 
 #### Gradle build files
-At the root of the project folder you can see various gradle files. You can use command line tools, Ant, Maven and Gradle to build and package your Android projects. The Android Tools team have chosen [Gradle](http://www.gradle.org/) as the main build system. You can read more about the new build system [here](http://tools.android.com/tech-docs/new-build-system). 
+At the root of the project folder you can see various gradle files. You can use [command line tools](http://developer.android.com/tools/building/building-cmdline.html), [Ant](http://ant.apache.org/), [Maven](http://maven.apache.org/) and [Gradle](http://www.gradle.org/) to build and package your Android projects. The Android Tools team have chosen the highly flexible [Gradle](http://www.gradle.org/) build system as the main Android build system. You can read more about the new build system [here](http://tools.android.com/tech-docs/new-build-system). 
 
-The `build.gradle`, `gradle.properties` and `settings.gradle` files describe how to build the helloworld project.
+The **build.gradle**, **gradle.properties** and **settings.gradle** files describe how to build the helloworld project.
 
-* The `settings.gradle` file describes which sub-projects to include. This is only the `helloworld` project folder in our case
-* The `build.gradle` file in the root folder describes the necessary dependencies for the build itself and a common setup for all projects
-* The `helloworld/build.gradle` describes how to build our Android project. It applies an android plugin and describes the configuration.
+* The **settings.gradle** file describes which sub-projects to include. This is only the **helloworld** project folder in our case
+* The **build.gradle** file in the root folder describes the necessary dependencies for the build itself and a common setup for all projects
+* The **helloworld/build.gradle** describes how to build our Android project. It applies an android plugin and describes the configuration.
 
-The `gradlew` and `gradlew.bat` scripts (for unix resp. Windows environments) are gradle _wrapper_ scripts. You can run a build on the command line using this script. It requires a certain Gradle version and if it is not present it downloads the binaries on the fly. The `gradlew` scripts and `gradle` directory are added automatically when you create a project with the Android Studio New Project Wizard and 
+The **gradlew** and **gradlew.bat** scripts (for unix resp. Windows environments) are gradle _wrapper_ scripts. You can run a build on the command line using this script. It requires a certain Gradle version and if it is not present it downloads the binaries on the fly. The **gradlew** scripts and **gradle** directory are added automatically when you create a project with the Android Studio New Project Wizard and 
 
 ```
 sample01> ./gradlew assembleDebug
