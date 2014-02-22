@@ -6,7 +6,11 @@
 An activity usually is a full Android screen that a user sees or interacts with. The `onCreate` method you saw in the MainActivity in lesson 1 is what we call a _life cycle callback_ method and this gives you a hook where you can initialize your activity when the Android system decides it is time to show your activity to the user. The [Activity life cycle](http://developer.android.com/reference/android/app/Activity.html#ActivityLifecycle) is very important and deserves good understanding when you are planning to do more Android development after this workshop.
 
 ## The main activity launch intent filter
-Of course an app can contain many screens / activites through which the end user navigates. There is one activity that can be designated as the activity which is shown when the user clicks on your app icon from the launcher. When you install an Android app the Android system needs to know in which ways it can interact with your app. You can define all these hooks in the `AndroidManifest.xml` file which basically describes the interface between your app and the Android operating system.
+When the user selects your app icon from the Home screen, the system calls the `onCreate()` method for the Activity in your app that you've declared to be the "launcher" (or "main") activity. This is the activity that serves as the main entry point to your app's user interface.
+
+You can define which activity to use as the main activity in the Android manifest file, AndroidManifest.xml, which is at the root of your project directory.
+
+The main activity for your app must be declared in the manifest with an `<intent-filter>` that includes the MAIN action and LAUNCHER category. For example:
 
 ```xml
 <activity
@@ -19,7 +23,15 @@ Of course an app can contain many screens / activites through which the end user
 </activity>
 ```
 
+If either the MAIN action or LAUNCHER category are not declared for one of your activities, then your app icon will not appear in the Home screen's list of apps.
+
 ## The Activity Life Cycle
+During the life of an activity, the system calls a core set of lifecycle methods in a sequence similar to a step pyramid. That is, each stage of the activity lifecycle is a separate step on the pyramid. As the system creates a new activity instance, each callback method moves the activity state one step toward the top. The top of the pyramid is the point at which the activity is running in the foreground and the user can interact with it.
+
+As the user begins to leave the activity, the system calls other methods that move the activity state back down the pyramid in order to dismantle the activity. In some cases, the activity will move only part way down the pyramid and wait (such as when the user switches to another app), from which point the activity can move back to the top (if the user returns to the activity) and resume where the user left off.
+
+![The Activity Life Cycle](img/basic-lifecycle.png)
+> **Figure 1**.  A simplified illustration of the Activity lifecycle, expressed as a step pyramid. This shows how, for every callback used to take the activity a step toward the Resumed state at the top, there's a callback method that takes the activity a step down. The activity can also return to the resumed state from the Paused and Stopped state.
 
 ### Using logcat
 
