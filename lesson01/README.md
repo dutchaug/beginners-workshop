@@ -220,10 +220,31 @@ We already saw a reference to **R.layout.activity__main** in the **onCreate** me
 
 **LinearLayout** is a **ViewGroup**. It can describes the way it layouts its children (in a linear way). **RelativeLayout** lays out its children _relative_ to other views in the view group, or to the parent border (the RelativeLayout itself). **GridLayout** lays out its children in a grid. There are a couple of other layout managers and it's pretty easy to create a layout manager yourself.
 
+Some parameters are common to all layouts:
+* **xmlns:android="http://schemas.android.com/apk/res/android"** Defines the XML namespace for Android. You should define this once, on the first XML tag in the file.
+* **android:layout__width="match__parent"**, **android:layout__height="fill__parent"** Takes up the entire width and height of the parent (in this case, the window). Possible values are match__parent and wrap__content.
+
 ##Exercise 1
+For the following exercises you can open the **Android preview** tool window to see the effect. There's no need to compile and deploy the app on your phone yet.
+
+1. Change the **android:layout__width** and **android:layout__height** attributes of both the **LinearLayout** and the **TextView** to `wrap__content`. Can you explain what happens?
 1. Add another **TextView** to the **res/activity__main.xml** layout file and see what happens. Can you predict how the other TextView will be layed out?
-2. Add an attribute **android:orientation="vertical"** to the **LinearLayout** tag. What happens?
-3. Add an attribute **android:textColor="#B20"** to the **TextView** tag.
+1. Add an attribute **android:orientation="vertical"** to the **LinearLayout** tag. What happens?
+1. Add an attribute **android:textColor="#B20"** to the **TextView** tag.
+1. Create a new resource file with name **res/drawable/background.xml** and add the xml below to that file. Now add an attribute **android:background="@drawable/background"** to the **LinearLayout** tag.
+
+```xml
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
+  <gradient 
+    android:type="linear"
+    android:centerX="62%" 
+    android:startColor="#FFFFF9B5" 
+    android:centerColor="#FFCCD3E2" 
+    android:endColor="#FFADBCFF" 
+    android:angle="270"/>
+</shape>
+```
+> A very powerfull tool in Android... Create shape drawables in XML!
 
 ## Android Tools
 
