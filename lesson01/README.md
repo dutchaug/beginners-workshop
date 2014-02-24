@@ -210,17 +210,20 @@ We already saw a reference to **R.layout.activity__main** in the **onCreate** me
 
 </LinearLayout>
 ```
-The most used method to describe User Interfaces in Android is XML. There's nothing holding you back in creating UIs in code directly, but there are two main reasons why XML is prefferred in most cases.
 
-1. **Separation Of Concerns (SOC)** - Defining your UI in xml helps you separate the UI from the code that controls its behavior.
-2. **Resource qualifiers** - Storing different layout XML files in different (qualified) resource directories is a powerful tool to create different user experiences for different device types. The most simply case is a default UI in the **res/layout** directory and e.g. a _landscape_ version of your UI in the **res/layout-land** directory!
+>The most used method to describe User Interfaces in Android is XML. There's nothing holding you back in creating UIs in code directly, but there are two main reasons why XML is prefferred in most cases.
+>
+>1. **Separation Of Concerns (SOC)** - Defining your UI in xml helps you separate the UI from the code that controls its behavior.
+>2. **Resource qualifiers** - Storing different layout XML files in different (qualified) resource directories is a powerful tool to create different user experiences for different device types. The most simply case is a default UI in the **res/layout** directory and e.g. a _landscape_ version of your UI in the **res/layout-land** directory!
+>
+>[More info](http://developer.android.com/guide/topics/ui/declaring-layout.html)
 
-[More info](http://developer.android.com/guide/topics/ui/declaring-layout.html)
+**LinearLayout** is a **ViewGroup**. It can describes the way it layouts its children (in a linear way). **RelativeLayout** lays out its children _relative_ to other views in the view group, or to the parent border (the RelativeLayout itself). **GridLayout** lays out its children in a grid. There are a couple of other layout managers and it's pretty easy to create a layout manager yourself.
 
-**Exercises**
-* Add another **TextView** to the **res/activity__main.xml** layout file and see what happens.
-* Add an attribute **android:orientation="vertical"** to the **LinearLayout** tag. What happens?
-* Add an attribute **android:textColor="#B20"** to the **TextView** tag.
+##Exercise 1
+1. Add another **TextView** to the **res/activity__main.xml** layout file and see what happens. Can you predict how the other TextView will be layed out?
+2. Add an attribute **android:orientation="vertical"** to the **LinearLayout** tag. What happens?
+3. Add an attribute **android:textColor="#B20"** to the **TextView** tag.
 
 ## Android Tools
 
