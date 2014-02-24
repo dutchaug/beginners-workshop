@@ -35,7 +35,7 @@ As the user begins to leave the activity, the system calls other methods that mo
 
 ### Using logcat
 
-The Android logging system provides a mechanism for collecting and viewing system debug output. Logs from various applications and portions of the system are collected in a series of circular buffers, which then can be viewed and filtered by the `adb logcat` command, or directly from Android Studio by pressing the ![img/android-toolbar-quickpick.png] button on the control bar at the bottom or selecting **View | Tool Windows | Android** from the menu.
+The Android logging system provides a mechanism for collecting and viewing system debug output. Logs from various applications and portions of the system are collected in a series of circular buffers, which then can be viewed and filtered by the `adb logcat` command, or directly from Android Studio by pressing the ![img/android-toolbar-quickpick.png] button on the control bar at the bottom or selecting **View | Tool Windows | Android** from the menu. [More info](http://developer.android.com/tools/debugging/debugging-log.html)
 
 ![Selecting the Android tool window from the menu](img/menu-view-toolwindows-android.png)
 
