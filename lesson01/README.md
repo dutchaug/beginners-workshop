@@ -111,7 +111,7 @@ The **versionName** value is a user-friendly name for the app version and can be
 #### AndroidManifest.xml
 Every application must have an AndroidManifest.xml file (with precisely that name) in its root directory. Let's open up the AndroidManifest.xml file of the helloworld app.
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.dutchaug.workshop.beginners.helloworld" >

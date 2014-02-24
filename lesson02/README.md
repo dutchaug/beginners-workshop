@@ -5,12 +5,12 @@
 ## Activities
 An activity usually is a full Android screen that a user sees or interacts with. The `onCreate` method you saw in the MainActivity in lesson 1 is what we call a _life cycle callback_ method and this gives you a hook where you can initialize your activity when the Android system decides it is time to show your activity to the user. The [Activity life cycle](http://developer.android.com/reference/android/app/Activity.html#ActivityLifecycle) is very important and deserves good understanding when you are planning to do more Android development after this workshop.
 
-## The main activity launch intent filter
+## The MainActivity launch intent filter
 When the user selects your app icon from the Home screen, the system calls the `onCreate()` method for the Activity in your app that you've declared to be the "launcher" (or "main") activity. This is the activity that serves as the main entry point to your app's user interface.
 
 You can define which activity to use as the main activity in the Android manifest file, AndroidManifest.xml, which is at the root of your project directory.
 
-The main activity for your app must be declared in the manifest with an `<intent-filter>` that includes the MAIN action and LAUNCHER category. For example:
+The main activity for your app must be declared in the AndroidManifest.xml file with an `<intent-filter>` that includes the MAIN action and LAUNCHER category. For example:
 
 ```xml
 <activity
@@ -35,7 +35,11 @@ As the user begins to leave the activity, the system calls other methods that mo
 
 ### Using logcat
 
-A good way to keep an eye on _which_ life cycle method is called _when_ is to simple create a log statement in a method override. For example in the `onCreate` method.
+The Android logging system provides a mechanism for collecting and viewing system debug output. Logs from various applications and portions of the system are collected in a series of circular buffers, which then can be viewed and filtered by the `adb logcat` command, or directly from Android Studio by pressing the ![img/android-toolbar-quickpick.png] button on the control bar at the bottom or selecting **View | Tool Windows | Android** from the menu.
+
+![Selecting the Android tool window from the menu](img/menu-view-toolwindows-android.png)
+
+A good way to keep an eye on _which_ life cycle method is called _when_ is to simple create a log statement in the life cycle method overrides. For example in the `onCreate` method.
 
 ```java
 public void onCreate(Bundle savedInstanceState) {
@@ -50,7 +54,7 @@ Where `TAG` is a (class) constant with a String you can filter on in your logcat
 private static final String TAG = MainActivity.class.getSimpleName();
 ```
 
-Or you can just use Jake Wharton's [Hugo](https://github.com/JakeWharton/hugo) library.
+Or, if you are just interested in which methods are called when, you can just use Jake Wharton's [Hugo](https://github.com/JakeWharton/hugo) library.
 
 Add this to your build.gradle file
 
@@ -67,7 +71,7 @@ apply plugin: 'hugo'
 
 And than add the `@DebugLog` annotation to any method you want to _debug log_.
 
-A couple of the Activity life cycle methods in the [MainActivity](sample01/lifecyclelogger/src/main/java/org/dutchaug/workshop/beginners/lifecyclelogger/MainActivity.java) in [sample01](sample01) are annotated with the `@DebugLog` annotation. Take that project for a spin.
+A couple of the Activity life cycle methods in the [MainActivity](sample01/lifecyclelogger/src/main/java/org/dutchaug/workshop/beginners/lifecyclelogger/MainActivity.java) in [sample02](sample02) are annotated with the `@DebugLog` annotation. Take that project for a spin to get a grasp of how your activity is managed by the system.
 
 ## Tweaking the Activity
 
