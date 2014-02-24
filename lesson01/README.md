@@ -244,7 +244,7 @@ For the following exercises you can open the **Android preview** tool window to 
     android:angle="270"/>
 </shape>
 ```
-> A very powerfull tool in Android... Create shape drawables in XML!
+> A very powerfull tool in Android... Create shape drawables in XML! [This on-line tool](http://angrytools.com/gradient/) can create these gradient XML files for you. Simply click the **Android** tab below to get the generated XML.
 
 ## Android Tools
 
