@@ -36,12 +36,13 @@ However, your application might also want to perform some action, such as send a
 For example, if you want to allow the user to send an email message, you can create the following intent:
 
 ```java
-Intent intent = new Intent(Intent.ACTION_SEND);
-intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"johan@dutchaug.org", "dennis@dutchaug.org"});
-startActivity(intent);
+Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:info@dutchaug.org"+));
+intent.putExtra(Intent.EXTRA_SUBJECT, "Hi there!");
+intent.putExtra(Intent.EXTRA_TEXT, "This is the e-mail body");
+startActivity(Intent.createChooser(intent, "Send mail..."));
 ```
 
-The EXTRA_EMAIL extra added to the intent is a string array of email addresses to which the email should be sent. When an email application responds to this intent, it reads the string array provided in the extra and places them in the "to" field of the email composition form. In this situation, the email application's activity starts and when the user is done, your activity resumes.
+ When an email application responds to this intent, it reads the strings provided in the extras and places them in the appropriate fields of the email composition form. In this situation, the email application's activity starts and when the user is done, your activity resumes.
 
 [More Info](http://developer.android.com/guide/components/activities.html)
 
