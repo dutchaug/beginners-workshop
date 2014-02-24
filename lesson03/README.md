@@ -49,10 +49,10 @@ startActivity(Intent.createChooser(intent, "Send mail..."));
 ##Exercise
 1. Import the sample03 project in Android Studio
 1. Open the **FirstActivity** class.
-1. Browse to the anonymous click listener and implement the following code: 
+1. Browse to the **onClick(View v)** method and implement the following code: 
   * Retrieve the e-mail address and subject from their EditText views.
-  * Create an explicit intent to the **SecondActivity** and pass the retrieved e-mail address in an intent extra.
+  * Create an _explicit_ intent to the **SecondActivity** and pass the retrieved e-mail address and -subject in an intent extra.
 1. Open the **SecondActivity** class. 
-1. Browse to the anonymous click listener and implement the following code: 
+1. Browse to the **onClick(View v)** method and implement the following code: 
   * Retrieve the e-mail message from the EditText view.
   * Create an implicit intent to send an e-mail and pass the retrieved e-mail address, subject and message in an intent extra.
