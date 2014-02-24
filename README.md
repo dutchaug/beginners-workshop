@@ -17,14 +17,24 @@ This workshop is aimed at the intermediate Java or OO programmer who wants to st
 
 ## What you _will_ learn in this workshop
 
+**[Lesson 1](lesson01)**
 * Importing Android Gradle projects in Android Studio
 * Navigating through a typical Android Studio (Gradle) Project structure
 * Building and running Android apps on your own device or Android Virtual Device (AVD).
+* Basic understanding of resources and resource qualifiers
+
+**[Lesson 2](lesson02)**
 * Working with Activities, and get basic understanding of the Activity Life Cycle
 * Working with the LinearLayout and RelativeLayout
-* Understand how to add various Views or _widgets_ to an Activity
+* Learn about common Views or _widgets_ and how to add them to an Activity
+* Learn how to interact with these views in your code.
+* Learn how to _listen_ to a click event.
+
+**[Lesson 3](lesson03)**
 * Move from one Activity to another with Intents
-* Basic understanding of resources and resource qualifiers
+* Basic understanding of tasks and the _activity back stack_
+
+**[Lesson 4](lesson04)**
 * Basic understanding of ListViews and Adapters
 
 ## What you _won't_ learn in this workshop
