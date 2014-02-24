@@ -47,7 +47,7 @@ startActivity(Intent.createChooser(intent, "Send mail..."));
 [More Info](http://developer.android.com/guide/components/activities.html)
 
 ##Exercise
-1. Import the sample03 project in Android Studio
+1. Import the [sample03](sample03) project in Android Studio
 1. Open the **FirstActivity** class.
 1. Browse to the **onClick(View v)** method and implement the following code: 
   * Retrieve the e-mail address and subject from their EditText views.
