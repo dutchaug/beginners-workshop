@@ -224,7 +224,7 @@ Some parameters are common to all layouts:
 * **xmlns:android="http://schemas.android.com/apk/res/android"** Defines the XML namespace for Android. You should define this once, on the first XML tag in the file.
 * **android:layout_width="match_parent"**, **android:layout_height="fill_parent"** Takes up the entire width and height of the parent (in this case, the window). Possible values are match_parent and wrap_content.
 
-##Exercise 1
+##Exercises
 _For the following exercises you can open the **Android preview** tool window to see the effect. There's no need to compile and deploy the app on your phone yet._
 
 1. Change the **android:layout_width** and **android:layout_height** attributes of both the **LinearLayout** and the **TextView** to `wrap_content`. Can you explain what happens?
