@@ -84,5 +84,7 @@ By default you get this standard app launch icon for new Android projects
 Use the [Android Asset Studio](http://android-ui-utils.googlecode.com/hg/asset-studio/dist/icons-launcher.html#foreground.type=clipart&foreground.space.trim=1&foreground.space.pad=0&foreground.clipart=res%2Fclipart%2Ficons%2Fsocial_send_now.svg&foreColor=c00%2C0&crop=0&backgroundShape=bevel&backColor=ffffff%2C100) to create a new launch icon.
 
 ### Change the Activity title
+The title of the MainActivity in [sample02](sample02) is set via the **android:label="@string/app_name"** attribute in the [AndroidManifest.xml](sample02/lifecyclelogger/src/main/AndroidManifest.xml) file. Use another string and try to change the title of the MainActivity class in the **onCreate** method.
 
 ### Change the background color
+Try to change the background color of the MainActivity in the [activity_main.xml](sample02/lifecyclelogger/src/main/res/layout/activity_main.xml) file.
