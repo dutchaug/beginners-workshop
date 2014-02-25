@@ -31,8 +31,8 @@ This workshop is aimed at the intermediate Java or OO programmer who wants to st
 * Learn how to _listen_ to a click event.
 
 **[Lesson 3](lesson03)**
-* Move from one Activity to another with Intents
 * Basic understanding of tasks and the _activity back stack_
+* Move from one Activity to another with _explicit_ and _implicit_ Intents
 
 **[Lesson 4](lesson04)**
 * Basic understanding of ListViews and Adapters

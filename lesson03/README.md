@@ -61,3 +61,5 @@ startActivity(Intent.createChooser(intent, "Send mail..."));
 1. Browse to the **onClick(View v)** method and implement the following code: 
   * Retrieve the e-mail message from the EditText view.
   * Create an implicit intent to send an e-mail and pass the retrieved e-mail address, subject and message in an intent extra.
+  
+> Notice that you don't need any permissions to use implicit intents to other applications. You are basically leaving the end user in control of how and what will be done with their data. They can simply cancel the e-mail composition by pressing the back button.
