@@ -1,4 +1,4 @@
-# Lesson 01<br/>Exploring your Android development environment
+# Lesson 01<br/>Android Studio and Android projects
 
 ## What you'll learn in this lesson
 * Importing an Android project in Android Studio

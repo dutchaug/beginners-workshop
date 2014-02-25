@@ -1,4 +1,4 @@
-# Lesson 02<br/>Learning about Activities
+# Lesson 02<br/>Activities and Views
 
 ## What you'll learn in this lesson
 * Working with Activities, and get basic understanding of the Activity Life Cycle

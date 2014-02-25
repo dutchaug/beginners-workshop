@@ -17,30 +17,36 @@ This workshop is aimed at the intermediate Java or OO programmer who wants to st
 
 ## What you _will_ learn in this workshop
 
-**[Lesson 1](lesson01)**
+**[Lesson 1](lesson01) Android Studio and Android projects**
 * Importing Android Gradle projects in Android Studio
 * Navigating through a typical Android Studio (Gradle) Project structure
 * Building and running Android apps on your own device or Android Virtual Device (AVD).
 * Basic understanding of resources and resource qualifiers
 
-**[Lesson 2](lesson02)**
+**[Lesson 2](lesson02) Activities and Views**
 * Working with Activities, and get basic understanding of the Activity Life Cycle
 * Learn about common Views or _widgets_ and how to add them to an Activity
 * Learn how to interact with these views in your code.
 * Learn how to _listen_ to a click event.
 
-**[Lesson 3](lesson03)**
+**[Lesson 3](lesson03) Intents, Tasks and the Activity Back Stack**
 * Basic understanding of tasks and the _activity back stack_
 * Move from one Activity to another with _explicit_ and _implicit_ Intents
 
-**[Lesson 4](lesson04)**
+**[Lesson 4](lesson04) ListViews and Adapters**
 * Basic understanding of ListViews and Adapters
+
+**[Lesson 5](lesson05) Creating a simple image viewer app**
+* Basic understanding of Fragments
+* Basic understanding of ViewPagers and the FragmentPagerAdapter
+* Asynchronously retrieving images with the Picasso library
+* Playing sounds
 
 ## What you _won't_ learn in this workshop
 
 * The Java language and syntax
 * Basic Object Oriented (OO) programming
 * Basic event driven programming
-* Working with Fragments, Services, Broadcast Receivers, databases, etc.
+* Working with Services, Broadcast Receivers, Databases, etc.
 
 [Go to lesson 1](lesson01)
