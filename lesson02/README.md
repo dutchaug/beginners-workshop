@@ -1,4 +1,4 @@
-# Lesson 02 - Learning about Activities
+# Lesson 02<br/>Learning about Activities
 
 ## What you'll learn in this lesson
 
