@@ -237,11 +237,11 @@ _For the following exercises you can open the **Android preview** tool window to
 <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
   <gradient 
     android:type="linear"
-    android:centerX="62%" 
-    android:startColor="#FFFFF9B5" 
-    android:centerColor="#FFCCD3E2" 
-    android:endColor="#FFADBCFF" 
-    android:angle="270"/>
+    android:centerX="15%" 
+    android:startColor="#FFFF8340" 
+    android:centerColor="#FFFF8340" 
+    android:endColor="#FF052280" 
+    android:angle="45"/>
 </shape>
 ```
 > A very powerful tool in Android... Create shape drawables in XML! [This on-line tool](http://angrytools.com/gradient/) can create these gradient XML files for you. Simply click the **Android** tab below to get the generated XML.
