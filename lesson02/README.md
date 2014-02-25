@@ -73,9 +73,15 @@ And than add the `@DebugLog` annotation to any method you want to _debug log_.
 
 A couple of the Activity life cycle methods in the [MainActivity](sample01/lifecyclelogger/src/main/java/org/dutchaug/workshop/beginners/lifecyclelogger/MainActivity.java) in [sample02](sample02) are annotated with the `@DebugLog` annotation. Take that project for a spin to get a grasp of how your activity is managed by the system.
 
-## Tweaking the Activity
+## Exercises
 
 ### Change the app icon
+By default you get this standard app launch icon for new Android projects
+
+![Default launch icon](img/ic_launcher.png)
+> Default launch icon
+
+Use the [Android Asset Studio](http://android-ui-utils.googlecode.com/hg/asset-studio/dist/icons-launcher.html#foreground.type=clipart&foreground.space.trim=1&foreground.space.pad=0&foreground.clipart=res%2Fclipart%2Ficons%2Fsocial_send_now.svg&foreColor=c00%2C0&crop=0&backgroundShape=bevel&backColor=ffffff%2C100) to create a new launch icon.
 
 ### Change the Activity title
 
