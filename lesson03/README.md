@@ -1,4 +1,4 @@
-# Lesson 3 - Intents, Tasks and the Activity Back Stack
+# Lesson 3<br/>Intents, Tasks and the Activity Back Stack
 
 An application usually contains multiple activities. Each activity should be designed around a specific kind of action the user can perform and can start other activities. For example, an email application might have one activity to show a list of new email. When the user selects an email, a new activity opens to view that email.
 
