@@ -25,7 +25,6 @@ This workshop is aimed at the intermediate Java or OO programmer who wants to st
 
 **[Lesson 2](lesson02)**
 * Working with Activities, and get basic understanding of the Activity Life Cycle
-* Working with the LinearLayout and RelativeLayout
 * Learn about common Views or _widgets_ and how to add them to an Activity
 * Learn how to interact with these views in your code.
 * Learn how to _listen_ to a click event.
