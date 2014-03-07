@@ -34,11 +34,12 @@ It's time to put the learned stuff into practice!
 1. Set the content view to the `activity_listview_in_layout.xml` layout file.
 1. Bind a local `ListView` object to the `ListView` in the layout with a `findViewById` and the id you can find in the `activity_listview_in_layout.xml` layout file.
 1. Create a local variable `String[] entries` which contains the items in the `animals` string resource array (see [arrays.xml](sample04/listviews/src/main/res/values/arrays.xml))
-1. Create a new array adapter with layout id `android.R.layout.simple_list_item_1` and assign this adapter to the list view object.
+1. Create a new array adapter with layout id `android.R.layout.simple_list_item_1` and assign this adapter to the list view object. (At this time you should be able to see something on screen, so take your project for a spin here and click on the "ListView in layout" item)
+1. **Extra** Create a custom list item layout, with at least one `TextView` with id `@android:id/text1`, and assign that to the `ArrayAdapter` constructor.
 
 ##Exercise 04.02
 1. Import [sample04](sample04) in Android Studio (if you have not done that already in exercise 04.01)
 1. Click on the TODO Tool View double click on the `TODO Exercise 04.02` item.
 1. Again create a local variable `String[] entries` which contains the items in the `animals` string resource array (see [arrays.xml](sample04/listviews/src/main/res/values/arrays.xml))
-1. Create a new array adapter with layout id `android.R.layout.simple_list_item_1` and assign this adapter to the list view via the `getListView()` method.
-1. Override the `protected void onListItemClick(ListView l, View v, int position, long id)` method and try to display the animal name via a [Toast](../cheatsheet.md#toast)
+1. Create a new array adapter with layout id `android.R.layout.simple_list_item_1` and assign this adapter to the list view via the `getListView()` method. (You should be able to see something on screen, so take your project for a spin here and click on the "ListActivity" item)
+1. **Extra** Override the `protected void onListItemClick(ListView l, View v, int position, long id)` method and try to display the animal name via a [Toast](../cheatsheet.md#toast)
