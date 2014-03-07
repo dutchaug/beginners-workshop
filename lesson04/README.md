@@ -9,7 +9,7 @@ One of the most frequently used views in Android apps is the [ListView](http://d
 ## Adding a ListView to your layout.
 A ListView usually displays a (large) list of things which you can vertically scroll. The _things_ in the list can have a custom view layout themselves. For know we'll simply use one of the standard layouts which you can find in the android runtime library itself. It's the layout with id `android.R.layout.simple_list_item_1`. It's a very simple layout with just one `TextView` with id `@android:id/text1`
 
-> Press `&#8984; &#8679; O` on a Mac or `Ctrl-Shift-N` on Windows/Linux and type `simple_list_item_1` in the search field. Click on one of the items you see to view this systems layout file's contents.
+> Press **&#8984; &#8679; O** on a Mac or **Ctrl-Shift-N** on Windows/Linux and type `simple_list_item_1` in the search field. Click on one of the items you see to view this systems layout file's contents.
 
 Okay, we've got a layout, know a list of things. You might retrieve your list from a server, or a database in real world Android applications, but it is good to know that for fixed lists you can easily create string array resources for every language or device specifically, just as any other Android resource.
 
