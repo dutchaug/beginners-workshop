@@ -25,7 +25,7 @@ You can resize your graphical resources with the following ratio table:
 ### Context
 `Context` is an interface to global information about an application environment. This is an abstract class whose implementation is provided by the Android system. It allows access to application-specific resources and classes, as well as up-calls for application-level operations such as launching activities, broadcasting and receiving intents, etc. Both the `Application` class and the `Activity` class implement the `Context` interface. The `Application` instance is tied to the lifecycle of the application, while the `Activity` instance is tied to the lifecycle of an Activity. Thus, they have access to different information about the application environment. You normally use the `Activity` context for view-related actions and the `Application` context generally should only be used if you need a context whose lifecycle is separate from the current context, that is tied to the lifetime of the process rather than the current component.
 
-[More info](http://developer.android.com/reference/android/content/Context.html)
+[More info on Context](http://developer.android.com/reference/android/content/Context.html)
 
 ### Toast
 A toast provides simple feedback about an operation in a small popup. It only fills the amount of space required for the message and the current activity remains visible and interactive. For example, navigating away from an email before you send it triggers a "Draft saved" toast to let you know that you can continue editing later. Toasts automatically disappear after a timeout.
@@ -40,7 +40,7 @@ Toast.makeText(this, "Message saved as draft.", Toast.LENGTH_LONG).show();
 
 If user response to a status message is required, consider instead using a [Notification]().
 
-[More info](http://developer.android.com/guide/topics/ui/notifiers/toasts.html)
+[More info on Toast](http://developer.android.com/guide/topics/ui/notifiers/toasts.html)
 
 ## Android Studio
 ### Project Structure

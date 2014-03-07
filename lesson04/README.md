@@ -42,8 +42,3 @@ It's time to put the learned stuff into practice!
 1. Again create a local variable `String[] entries` which contains the items in the `animals` string resource array (see [arrays.xml](sample04/listviews/src/main/res/values/arrays.xml))
 1. Create a new array adapter with layout id `android.R.layout.simple_list_item_1` and assign this adapter to the list view via the `getListView()` method.
 1. Override the `protected void onListItemClick(ListView l, View v, int position, long id)` method and try to display the animal name via a [Toast](../cheatsheet.md#toast)
-
-
-
-        getListView().setAdapter(new ArrayAdapter<CharSequence>(this, android.R.layout.simple_list_item_1, ));
-
