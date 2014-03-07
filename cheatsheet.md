@@ -27,6 +27,21 @@ You can resize your graphical resources with the following ratio table:
 
 [More info](http://developer.android.com/reference/android/content/Context.html)
 
+### Toast
+A toast provides simple feedback about an operation in a small popup. It only fills the amount of space required for the message and the current activity remains visible and interactive. For example, navigating away from an email before you send it triggers a "Draft saved" toast to let you know that you can continue editing later. Toasts automatically disappear after a timeout.
+
+![Toast](img/toast.png)
+
+First, instantiate a Toast object with one of the `makeText()` methods. This method takes three parameters: a context, the text message, and the duration for the toast. It returns a properly initialized Toast object. You can display the toast notification with `show()`, as shown in the following example:
+
+```java
+Toast.makeText(this, "Message saved as draft.", Toast.LENGTH_LONG).show();
+```
+
+If user response to a status message is required, consider instead using a [Notification]().
+
+[More info](http://developer.android.com/guide/topics/ui/notifiers/toasts.html)
+
 ## Android Studio
 ### Project Structure
 When you create a new project in Android Studio almost all your project files are inside the `src` directory, including resources and the manifest file. For the most part, you should need to modify only the files under the `src` directory. More information about the Gradle project structure is available in the [Gradle Plugin User Guide](http://tools.android.com/tech-docs/new-build-system/user-guide).
