@@ -22,6 +22,11 @@ You can resize your graphical resources with the following ratio table:
 | :--: | :--: | :---: | :----: |
 | 2    | 3    | 4     | 6      |
 
+### Context
+`Context` is an interface to global information about an application environment. This is an abstract class whose implementation is provided by the Android system. It allows access to application-specific resources and classes, as well as up-calls for application-level operations such as launching activities, broadcasting and receiving intents, etc. Both the `Application` class and the `Activity` class implement the `Context` interface. The `Application` instance is tied to the lifecycle of the application, while the `Activity` instance is tied to the lifecycle of an Activity. Thus, they have access to different information about the application environment. You normally use the `Activity` context for view-related actions and the `Application` context generally should only be used if you need a context whose lifecycle is separate from the current context, that is tied to the lifetime of the process rather than the current component.
+
+[More info](http://developer.android.com/reference/android/content/Context.html)
+
 ## Android Studio
 ### Project Structure
 When you create a new project in Android Studio almost all your project files are inside the `src` directory, including resources and the manifest file. For the most part, you should need to modify only the files under the `src` directory. More information about the Gradle project structure is available in the [Gradle Plugin User Guide](http://tools.android.com/tech-docs/new-build-system/user-guide).
