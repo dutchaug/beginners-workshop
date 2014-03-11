@@ -26,9 +26,9 @@ You can reference a string array resource from a [context](../cheatsheet.md#cont
 ## Adapters
 An **Adapter** object acts as a _bridge_ or between an **AdapterView** (in our case the **ListView** which extends from **AdapterView**) and the underlying data for that view (our String array). The Adapter provides access to the data items. The Adapter is also responsible for making a **View** for each item in the data set by implementing a `public View getView (int position, View convertView, ViewGroup parent)` method, which our **ListView** conveniently calls whenever it needs to render the next view for item with position **position** in the list.
 
-The **ArrayAdapter** is a simple implementation of the **Adapter** interface, which allows us to bind data in an array to a layout XML file and a **TextView** in that layout.
+The **ArrayAdapter** is a very simple implementation of the **Adapter** interface, which allows us to bind data in an array to a layout XML file and a single **TextView** in that layout.
 
-We've got all the necessary information to construct an **ArrayAddapter** in our example.
+We've got all the necessary information to construct an **ArrayAddapter** in our example we use this constructor:
 
 ```java
 public ArrayAdapter (Context context, int resource, T[] objects)
@@ -47,7 +47,7 @@ It's time to put the learned stuff into practice!
 1. Set the content view to the `activity_listview_in_layout.xml` layout file.
 1. Bind a local `ListView` object to the `ListView` in the layout with a `findViewById` and the id you can find in the `activity_listview_in_layout.xml` layout file.
 1. Create a local variable `String[] entries` which contains the items in the `animals` string resource array (see [arrays.xml](sample04/listviews/src/main/res/values/arrays.xml))
-1. Create a new array adapter with layout id `android.R.layout.simple_list_item_1` and assign this adapter to the list view object. (At this time you should be able to see something on screen, so take your project for a spin here and click on the "ListView in layout" item)
+1. Create a new **ArrayAdapter** instance with layout id `android.R.layout.simple_list_item_1` and assign this adapter to the **ListView** object. (At this time you should be able to see something on screen, so take your project for a spin here and click on the "ListView in layout" item)
 1. **Extra** Create a custom list item layout, with at least one `TextView` with id `@android:id/text1`, and assign that to the `ArrayAdapter` constructor.
 
 ##Exercise 04.02
@@ -56,3 +56,61 @@ It's time to put the learned stuff into practice!
 1. Again create a local variable `String[] entries` which contains the items in the `animals` string resource array (see [arrays.xml](sample04/listviews/src/main/res/values/arrays.xml))
 1. Create a new array adapter with layout id `android.R.layout.simple_list_item_1` and assign this adapter to the list view via the `getListView()` method. (You should be able to see something on screen, so take your project for a spin here and click on the "ListActivity" item)
 1. **Extra** Override the `protected void onListItemClick(ListView l, View v, int position, long id)` method and try to display the animal name via a [Toast](../cheatsheet.md#toast)
+
+## Building a custom adapter with BaseAdapter
+Okay, a list with Strings is kind of nice for an example, but what about a list with a little bit more information. Let's say a list of animals with a thumbnail image and two textviews with the animal name and the type of animal. How do we go about creating that?
+
+A good class to extend in this case is the `BaseAdapter` class. If you create a new class and extend `BaseAdapter` Android Studio will immediately show you something is wrong by red underlining the class definition. Hover your mouse over the red curly line to see what's wrong.
+
+![Somethings's wrong with our CustomAdapter](img/somethings_wrong.png)
+
+Move your cursor to the erronious line an press `Alt-Enter` to see some quickfixes
+
+![Quick fix me please](img/quick_fix_me_please.png)
+
+Select `Implement methods`, select all the suggested methods, click **OK** and watch the magic unfold.
+
+![Select methods to implement](img/select_methods_to_implement.png)
+
+The `getCount` method should return the number of items in our adapter. The `getItem` method should return the actual data object for a certain position and the `getItemId` should return a unique id for our data item at the given position. Of these four methods the `getView` method is the most important and most complex method. The `getView` method is responsible for binding a data item at the given position to a new or recycled view (the `convertView` argument).
+
+If the `convertView` argument is `null` you have to use a so called **inflater** to convert the layout XML file to an actual `View` object. Here's how you do this in `getView`
+
+```java
+if (convertView == null) {
+  LayoutInflater layoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+  convertView = layoutInflater.inflate(R.layout.custom_layout, null, false);
+}
+```
+
+The `mContext` field is something you can initialize in your custom adapter constructor
+
+```java
+public CustomAdapter(Context context) {
+  this.mContext = context;
+}
+```
+
+You can use the `convertView` to find the image thumbnail and two text views.
+
+```java
+ImageView imageView = (ImageView) convertView.findViewById(R.id.thumbnail_image);
+// Set the image resource of imageView to something you retrieve from your data
+
+TextView textView = (TextView) convertView.findViewById(R.id.animal_name);
+// Etc.
+```
+
+At the end of the `getView` method you should return the updated `convertView` which will be used as an item in the list view.
+
+Okay, let's see this in action.
+
+##Exercise 04.03
+1. Import [sample04](sample04) in Android Studio (if you have not done that already in the previous exercises 04.01)
+1. Click on the TODO Tool View double click on the `TODO Exercise 04.03` item.
+1. Complete the `getCount()`, `getItem(int position)` and `getItemId(int position)` methods to return valid values and take your project for a spin. 
+1. In `CustomAdapterActivity` complete the `onListItemClick` method. Use the `position` to retrieve an `Animal` object from the `mCustomerAdapter` field and use the `animal.infoUrl` information to create a valid `Uri`. Again, take your project for a spin and click on an item.
+1. **Extra** Instead of using a `ListView` use a [GridView](http://developer.android.com/guide/topics/ui/layout/gridview.html) and the same custom adapter to create a grid of animals.
+
+## Conclusion
+The `ListView` and the `BaseAdapter` are powerful tools to create great looking lists in your app. This lesson only showed you the tip of the iceberg. There are still many things to discover for a correct and optimal implementation of great performing lists. For example it is highly adviced to use the [ViewHolder pattern](http://developer.android.com/training/improving-layouts/smooth-scrolling.html#ViewHolder) for better performance. At some point in time you might want to add [sections to your list view](http://cyrilmottier.com/2011/07/05/listview-tips-tricks-2-section-your-listview/) or even show [multiple views types in your list](http://antew.com/?p=162).

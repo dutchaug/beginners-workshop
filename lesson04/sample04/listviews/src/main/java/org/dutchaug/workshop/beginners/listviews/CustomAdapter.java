@@ -14,6 +14,7 @@ import java.util.List;
 public class CustomAdapter extends BaseAdapter {
 
     private final Context mContext;
+
     private final List<Animal> mData = new ArrayList<Animal>();
 
     public CustomAdapter(Context context) {
@@ -47,19 +48,20 @@ public class CustomAdapter extends BaseAdapter {
         mData.add(new Animal("Wolf", "Mammal", R.drawable.wolf_thumb, R.drawable.wolf, "http://a-z-animals.com/animals/wolf/"));
     }
 
+    // TODO Exercise 04.03
     @Override
     public int getCount() {
-        return mData.size();
+        return 0; // TODO Return the number of items in our adapter
     }
 
     @Override
     public Object getItem(int position) {
-        return mData.get(position);
+        return null; // TODO Retrieve the correct animal and return it
     }
 
     @Override
     public long getItemId(int position) {
-        return position;
+        return 0; // TODO What would be a good value to return here?
     }
 
     @Override
@@ -68,6 +70,7 @@ public class CustomAdapter extends BaseAdapter {
 
         if (convertView == null) {
             LayoutInflater layoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            // If you have created your own custom layout you can replace it here
             convertView = layoutInflater.inflate(R.layout.custom_layout, null, false);
         }
 

@@ -20,8 +20,7 @@ public class CustomAdapterActivity extends ListActivity {
 
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
-        Animal animal = (Animal) mCustomAdapter.getItem(position);
-        Uri uri = Uri.parse(animal.infoUrl);
+        Uri uri = null; // TODO Complete the `onListItemClick` method. Use the `position` to retrieve an `Animal` object from the `mCustomerAdapter` field and use the `animal.infoUrl` information to create a valid `Uri`
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
