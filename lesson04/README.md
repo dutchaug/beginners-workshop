@@ -114,7 +114,7 @@ Okay, let's see this in action.
 
 ![Custom adapater result](img/custom_adapter_result.png)
 
-1. **Extra** Instead of using a `ListView` use a [GridView](http://developer.android.com/guide/topics/ui/layout/gridview.html) and the same custom adapter to create a grid of animals.
+* **Extra exercise** Instead of using a `ListView` use a [GridView](http://developer.android.com/guide/topics/ui/layout/gridview.html) and the same custom adapter to create a grid of animals.
 
 ## Conclusion
 The `ListView` and the `BaseAdapter` are powerful tools to create great looking lists in your app. This lesson only showed you the tip of the iceberg. There are still many things to discover for a correct and optimal implementation of great performing lists. For example it is highly adviced to use the [ViewHolder pattern](http://developer.android.com/training/improving-layouts/smooth-scrolling.html#ViewHolder) for better performance. At some point in time you might want to add [sections to your list view](http://cyrilmottier.com/2011/07/05/listview-tips-tricks-2-section-your-listview/) or even show [multiple views types in your list](http://antew.com/?p=162).
