@@ -3,6 +3,7 @@
     <string-array name="activities">
         <item>ListView in layout</item>
         <item>ListActivity</item>
+        <item>Custom adapter</item>
     </string-array>
     <string-array name="animals">
         <item>bear</item>

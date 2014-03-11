@@ -1,5 +1,9 @@
 # Lesson 3<br/>Intents, Tasks and the Activity Back Stack
 
+## What you'll learn in this lesson
+* 
+
+## Introduction
 An application usually contains multiple activities. Each activity should be designed around a specific kind of action the user can perform and can start other activities. For example, an email application might have one activity to show a list of new email. When the user selects an email, a new activity opens to view that email.
 
 An activity can even start activities that exist in other applications on the device. For example, if your application wants to send an email, you can define an intent to perform a "sendto" action and include some data, such as an email address and a message. An activity from another application that declares itself to handle this kind of intent then opens. In this case, the intent is to send an email, so an email application's "compose" activity starts.

@@ -31,6 +31,9 @@ public class MainActivity extends ListActivity {
             case 1:
                 startActivity(new Intent(this, ListViewActivity.class));
                 break;
+            case 2:
+                startActivity(new Intent(this, CustomAdapterActivity.class));
+                break;
         }
     }
 
