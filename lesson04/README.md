@@ -7,11 +7,11 @@
 One of the most frequently used views in Android apps is the [ListView](http://developer.android.com/guide/topics/ui/layout/listview.html). It's also one of the more complex views and one of the most cumbersome things to work with if you don't play by the rules. We hope to give you a solid introduction to good use of this powerful view.
 
 ## Adding a ListView to your layout.
-A ListView usually displays a (large) list of things which you can vertically scroll. The _things_ in the list can have a custom view layout themselves. For now we'll simply use one of the standard layouts which you can find in the android runtime library itself. It's the layout with id `android.R.layout.simple_list_item_1`. It's a very simple layout with just one `TextView` with id `@android:id/text1`
+A ListView usually displays a (large) list of things which you can vertically scroll. The _things_ in the list can have a custom view layout themselves. For the first example we'll simply use one of the standard layouts which you can find in the android runtime library itself. It's the layout with id `android.R.layout.simple_list_item_1`. It's a very simple layout with just one `TextView` with id `@android:id/text1`
 
 > Press `Cmd-Shift-O` on a Mac or `Ctrl-Shift-N` on a Windows/Linux machine to open the **go to file** prompt. Simply type `simple_list_item_1` in the search field. Click on one of the items you see to view this systems layout file's contents.
 
-Okay, we've got a layout, now a list of things. You might retrieve your list from a server, or a database in real world Android applications, but it is good to know that for fixed lists you can easily create string array resources for every language or device specifically, just as any other Android resource.
+Okay, we've got a layout, now we need a _list of things_. You might retrieve your list from a server, or a database in real world Android applications, but it is good to know that for fixed lists you can easily create **string array resources** for every language or device specifically, just as any other Android resource.
 
 ```xml
 <string-array name="animals">
@@ -26,7 +26,7 @@ You can reference a string array resource from a [context](../cheatsheet.md#cont
 ## Adapters
 An **Adapter** object acts as a _bridge_ or between an **AdapterView** (in our case the **ListView** which extends from **AdapterView**) and the underlying data for that view (our String array). The Adapter provides access to the data items. The Adapter is also responsible for making a **View** for each item in the data set by implementing a `public View getView (int position, View convertView, ViewGroup parent)` method, which our **ListView** conveniently calls whenever it needs to render the next view for item with position **position** in the list.
 
-The **ArrayAdapter** is a very simple implementation of the **Adapter** interface, which allows us to bind data in an array to a layout XML file and a single **TextView** in that layout.
+The [ArrayAdapter](http://developer.android.com/reference/android/widget/ArrayAdapter.html) is a very simple implementation of the **Adapter** interface, which allows us to bind data in an array to a layout XML file and a single **TextView** in that layout.
 
 We've got all the necessary information to construct an **ArrayAddapter** in our example we use this constructor:
 
@@ -35,9 +35,10 @@ public ArrayAdapter (Context context, int resource, T[] objects)
 ```
 
 Parameters:
-**context** The current context.
-**resource** The resource ID for a layout file containing a TextView to use when instantiating views.
-**objects** The objects to represent in the ListView.
+
+* **context** The current [context](../cheatsheet.md#context).
+* **resource** The resource ID for a layout file containing a TextView to use when instantiating views.
+* **objects** The objects to represent in the ListView.
 
 ## Exercise 04.01
 It's time to put the learned stuff into practice!
@@ -109,8 +110,13 @@ Okay, let's see this in action.
 1. Import [sample04](sample04) in Android Studio (if you have not done that already in the previous exercises 04.01)
 1. Click on the TODO Tool View double click on the `TODO Exercise 04.03` item.
 1. Complete the `getCount()`, `getItem(int position)` and `getItemId(int position)` methods to return valid values and take your project for a spin. 
-1. In `CustomAdapterActivity` complete the `onListItemClick` method. Use the `position` to retrieve an `Animal` object from the `mCustomerAdapter` field and use the `animal.infoUrl` information to create a valid `Uri`. Again, take your project for a spin and click on an item.
+1. In `CustomAdapterActivity` complete the `onListItemClick` method. Use the `position` to retrieve an `Animal` object from the `mCustomerAdapter` field and use the `animal.infoUrl` information to create a valid `Uri`. Again, take your project for a spin and click on an item. If all's well you should see something like this:
+
+![Custom adapater result](img/custom_adapter_result.png)
+
 1. **Extra** Instead of using a `ListView` use a [GridView](http://developer.android.com/guide/topics/ui/layout/gridview.html) and the same custom adapter to create a grid of animals.
 
 ## Conclusion
 The `ListView` and the `BaseAdapter` are powerful tools to create great looking lists in your app. This lesson only showed you the tip of the iceberg. There are still many things to discover for a correct and optimal implementation of great performing lists. For example it is highly adviced to use the [ViewHolder pattern](http://developer.android.com/training/improving-layouts/smooth-scrolling.html#ViewHolder) for better performance. At some point in time you might want to add [sections to your list view](http://cyrilmottier.com/2011/07/05/listview-tips-tricks-2-section-your-listview/) or even show [multiple views types in your list](http://antew.com/?p=162).
+
+On to [lesson 5](../lesson05)

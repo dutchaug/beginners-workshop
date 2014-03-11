@@ -126,3 +126,8 @@ The title of the MainActivity in [sample02](sample02) is set via the **android:l
 
 ### Change the background color
 Try to change the background color of the MainActivity in the [activity_main.xml](sample02/lifecyclelogger/src/main/res/layout/activity_main.xml) file.
+
+##Conclusion
+TODO
+
+On to [lesson 3](../lesson03)

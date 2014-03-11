@@ -225,7 +225,7 @@ Some parameters are common to all layouts:
 * **android:layout_width="match_parent"**, **android:layout_height="fill_parent"** Takes up the entire width and height of the parent (in this case, the window). Possible values are match_parent and wrap_content.
 
 ##Exercises
-_For the following exercises you can open the **Android preview** tool window to see the effect. There's no need to compile and deploy the app on your phone yet._
+> For the following exercises you can open the **Android preview** tool window to see the effect. There's no need to compile and deploy the app on your phone yet.
 
 1. Change the **android:layout_width** and **android:layout_height** attributes of both the **LinearLayout** and the **TextView** to `wrap_content`. Can you explain what happens?
 1. Add another **TextView** to the **res/activity_main.xml** layout file and see what happens. Can you predict how the other TextView will be layed out?
@@ -244,6 +244,7 @@ _For the following exercises you can open the **Android preview** tool window to
     android:angle="45"/>
 </shape>
 ```
+
 > A very powerful tool in Android... Create shape drawables in XML! [This on-line tool](http://angrytools.com/gradient/) can create these gradient XML files for you. Simply click the **Android** tab below to get the generated XML.
 
 ## Android Tools
@@ -254,3 +255,7 @@ _For the following exercises you can open the **Android preview** tool window to
 
 ### DDMS
 
+##Conclusion
+TODO
+
+On to [lesson 2](../lesson02)
