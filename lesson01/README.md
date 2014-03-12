@@ -49,7 +49,7 @@ The **build.gradle**, **gradle.properties** and **settings.gradle** files descri
 * The **build.gradle** file in the root folder describes the necessary dependencies for the build itself and a common setup for all projects
 * The **helloworld/build.gradle** describes how to build our Android project. It applies an android plugin and describes the configuration.
 
-The **gradlew** and **gradlew.bat** scripts (for unix resp. Windows environments) are gradle _wrapper_ scripts. You can run a build on the command line using this script. It requires a certain Gradle version and if it is not present it downloads the binaries on the fly. The **gradlew** scripts and **gradle** directory are added automatically when you create a project with the Android Studio New Project Wizard and 
+The **gradlew** and **gradlew.bat** scripts (for unix resp. Windows environments) are gradle _wrapper_ scripts. You can run a build on the command line using this script. It requires a certain Gradle version and if it is not present it downloads the binaries on the fly. The **gradlew** scripts and **gradle** directory are added automatically when you create a project with the Android Studio New Project Wizard.
 
 ```
 sample01> ./gradlew assembleDebug
@@ -104,6 +104,8 @@ dependencies {
 }
 ```
 
+The first line says to apply the Android Gradle plugin for this build, whereafter (with the code block preceded by the word 'android') we immediately configure this plugin with the Android Domain Specific Language (DSL). [More info](http://tools.android.com/tech-docs/new-build-system/user-guide)
+
 The **minSdkVersion** version states which Android OS level you minimally support with your app. We have chosen to support version 14 (Android 4.0 - Ice Cream Sandwich) and up in this workshop.
 
 The **targetSdkVersion** informs the system that you have tested against the target version and the system should not enable any compatibility behaviors to maintain your app's forward-compatibility with the target version. The application is still able to run on older versions (down to **minSdkVersion**). To maintain your application along with each Android release, you should increase the value of this attribute to match the latest API level, then thoroughly test your application on the corresponding platform version.
@@ -112,8 +114,35 @@ The **versionCode** is a value which is used mainly for distribution on Google P
 
 The **versionName** value is a user-friendly name for the app version and can be any string. This value is visible to the end-users on Google Play.
 
+Furthermore the Gradle build system (like the Maven build system) depends on a certain folder structure.
+
+The basic project starts with two components called “source sets”. The main source code and the test code. These live respectively in:
+
+```
+src/main/
+src/androidTest/
+```
+
+Inside each of these folders exists folder for each source components.
+For both the Java and Android plugin, the location of the Java source code and the Java resources:
+
+```
+java/
+resources/
+```
+
+For the Android plugin, extra files and folders specific to Android:
+```
+AndroidManifest.xml
+res/
+assets/
+aidl/
+rs/
+jni/
+```
+
 #### AndroidManifest.xml
-Every application must have an AndroidManifest.xml file (with precisely that name) in its root directory. Let's open up the AndroidManifest.xml file of the helloworld app.
+Every application must have an AndroidManifest.xml file (with precisely that name) in its root directory. Let's open up the AndroidManifest.xml file of the helloworld app which lives in the in `sample01/helloworld/src/main` folder.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
