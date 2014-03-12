@@ -85,7 +85,7 @@ Open the [activity_main.xml](sample02/lifecyclelogger/src/main/res/layout/activi
 ![Android Design Tool View](img/as-design-tool-view.png)
 > Android Design Tool View
 
-On the left you see a long list of **Views* or _widgets_. Grab a **Person Name** from the **Text Fields** section and place it under the **TextView** view. Grab a **Button** from the **Widgets** section and place it under the **EditText** view.
+On the left you see a long list of **Views** or _widgets_. Grab a **Person Name** from the **Text Fields** section and place it under the **TextView** view. Grab a **Button** from the **Widgets** section and place it under the **EditText** view.
 
 ### Referencing views in the layout in your code
 To get a reference to the views in the layout in your code you can create a resource-id for every view you want to interact with. Creating an id is done by adding an **android:id** attribute to the views and giving them an (e.g.) **@+id/uniquenameforyourview** value. The "@"-sign identifies a resource (we already saw references to string resources via **@string/app_name** for instance). The "+"-sign just before the **id** indicates we want to _create_ and id. If we forget the "+"-sign the **@id/uniquenameforyourview** becomes a _reference_.
