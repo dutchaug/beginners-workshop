@@ -82,7 +82,7 @@ A couple of the Activity life cycle methods in the [MainActivity](sample02/lifec
 ### Adding new views to the layout
 Open the [activity_main.xml](sample02/lifecyclelogger/src/main/res/layout/activity_main.xml) file in the [sample02](sample02) project in Android Studio and click on the **Design** tab next to the **Text** tab below. You should see something like this.
 
-![Android Design Tool View](img/as-design-tool)
+![Android Design Tool View](img/as-design-tool-view.png)
 > Android Design Tool View
 
 On the left you see a long list of **Views* or _widgets_. Grab a **Person Name** from the **Text Fields** section and place it under the **TextView** view. Grab a **Button** from the **Widgets** section and place it under the **EditText** view.
