@@ -263,8 +263,8 @@ Some parameters are common to all layouts:
 1. Open the **activity_main.xml** file and change the **android:layout_width** and **android:layout_height** attributes of both the **LinearLayout** and the **TextView** to `wrap_content`. Can you explain what happens?
 1. Add another **TextView** to the **res/activity_main.xml** layout file and see what happens. Can you predict how the other TextView will be layed out?
 1. Add an attribute **android:orientation="vertical"** to the **LinearLayout** tag. What happens?
-1. Add an attribute **android:textColor="#B20"** to the **TextView** tag.
-1. Create a new resource file with name **res/drawable/background.xml** and add the xml below to that file. Now add an attribute **android:background="@drawable/background"** to the **LinearLayout** tag.
+1. Add an attribute **android:textColor="#B20"** to the **TextView** tag. Try to find other text attributes you can change.
+1. Create a new resource file with name **res/drawable/background.xml** and add the xml below to that file. Now add an attribute **android:background="@drawable/background"** to the **LinearLayout** tag in the **activity_main.xml** file.
 
 ```xml
 <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
@@ -278,7 +278,7 @@ Some parameters are common to all layouts:
 </shape>
 ```
 
-> A very powerful tool in Android... Create shape drawables in XML! [This on-line tool](http://angrytools.com/gradient/) can create these gradient XML files for you. Simply click the **Android** tab below to get the generated XML.
+> Creating shape drawables in XML is a very powerful tool in Android! [This on-line tool](http://angrytools.com/gradient/) can create these gradient XML files for you. Simply click the **Android** tab at the bottom to get the generated XML.
 
 ## Android Tools
 
