@@ -3,7 +3,7 @@
 ## What you'll learn in this lesson
 * Importing an Android project in Android Studio
 * Understand and navigate the basic Android project structure in Android Studio
-  * Learn about the AndroidManifest.xml file
+  * Learn about the **AndroidManifest.xml** file
   * Know where the java source files are located
   * Understand the basics of resources
 * Know the basics about and how to start the Android Tools from Android Studio

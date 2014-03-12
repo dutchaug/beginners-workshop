@@ -24,23 +24,27 @@ This workshop is aimed at the intermediate Java or OO programmer who wants to st
 * Basic understanding of resources and resource qualifiers
 
 **[Lesson 2](lesson02) Activities and Views**
-* Working with Activities, and get basic understanding of the Activity Life Cycle
-* Learn about common Views or _widgets_ and how to add them to an Activity
+* Working with **Activities**, and get basic understanding of the Activity Life Cycle
+* Learn about common **Views** or _widgets_ and how to add them to an **Activity**
 * Learn how to interact with these views in your code.
 * Learn how to _listen_ to a click event.
 
 **[Lesson 3](lesson03) Intents, Tasks and the Activity Back Stack**
 * Basic understanding of tasks and the _activity back stack_
-* Move from one Activity to another with _explicit_ and _implicit_ Intents
+* Move from one **Activity** to another with _explicit_ and _implicit_ **Intents**
 
 **[Lesson 4](lesson04) ListViews and Adapters**
-* Basic understanding of ListViews and Adapters
+* Basic understanding of **ListView**s and **Adapter**s
+* Working with the **ArrayAdapter**
+* Creating String Array resources
+* Extending the *BaseAdapter** to create a custom adapter
+* Creating more complex layouts for the list items
 
 **[Lesson 5](lesson05) Creating a simple image viewer app**
-* Basic understanding of Fragments
-* Basic understanding of ViewPagers and the FragmentPagerAdapter
+* Basic understanding of **Fragment**s
+* Basic understanding of **ViewPager**s and the **FragmentPagerAdapter**
 * Asynchronously retrieving images with the Picasso library
-* Playing sounds
+* Playing (animal ;-) sounds
 
 ## What you _won't_ learn in this workshop
 
