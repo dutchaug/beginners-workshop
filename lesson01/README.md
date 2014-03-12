@@ -255,7 +255,7 @@ We already saw a reference to **R.layout.activity_main** in the **onCreate** met
 
 Some parameters are common to all layouts:
 * **xmlns:android="http://schemas.android.com/apk/res/android"** Defines the XML namespace for Android. You should define this once, on the first XML tag in the file.
-* **android:layout_width="match_parent"**, **android:layout_height="fill_parent"** Takes up the entire width and height of the parent (in this case, the window). Possible values are match_parent and wrap_content.
+* **android:layout_width="match_parent"**, **android:layout_height="wrap_content"** Takes up the entire width and height of the parent (in this case, the window). Possible values are match_parent and wrap_content.
 
 ##Exercises
 > For the following exercises you can open the **Android preview** tool window to see the effect. There's no need to compile and deploy the app on your phone yet.
