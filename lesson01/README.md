@@ -16,15 +16,19 @@ If you know all about the learning goals for this lesson move on to [lesson 2](.
 ## Android Studio
 
 ### Importing an Android project in Android Studio
-Android Studio contains a new project wizard which is started by chosing **File > New Project...**. However convenient it also poses a lot of questions, settings and steps which might be a bit too overwhelming at this point. For this workshop we would like to teach you how to import an existing Android project so we can keep the project contents consise to what is needed in the sample or exercise. In this lesson we are going to import a very tiny "Hello World" app.
+Android Studio contains a new project wizard which is started by chosing **File > New Project...**. However convenient it also poses a lot of questions, settings and steps which might be a bit too overwhelming at this point. For this workshop we would like to teach you how to import an existing Android project so we can keep the project contents consise to what is needed in the sample or exercise. In this lesson we are going to import a very tiny "Hello World" app. Before we do this please clone the **beginners-workshop** Github repository by typing `git clone git@github.com:dutchaug/beginners-workshop.git` in an empty folder.
+
+In Android Studio, chose **File > Import Project...** 
 
 ![The File Menu](img/as-file-menu.png)
 > The File Menu
 
+...or select the **Import Project...** option from the quick start menu 
+
 ![The Quick Start Menu](img/as-quick-start-menu.png)
 >The Quick Start Menu
 
-In Android Studio, chose **File > Import Project...** or select the **Import Project...** option from the quick start menu and select the **sample01** folder. 
+Then select the **sample01** folder from the folder where you cloned the **beginners-workshop** Github repository.
 
 ![Select Gradle Project import](img/as-project-import.png)
 >Select Gradle Project import. Android Studio may ask you to choose the type of project you are importing. If this is the case, make sure to choose **Import project from external model** and select the **Gradle** option.
