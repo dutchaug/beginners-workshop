@@ -92,7 +92,7 @@ To get a reference to the views in the layout in your code you can create a reso
 
 Go ahead and add **android:id** attributes to the **TextView**, **EditText** and **Button** views in the [activity_main.xml](sample02/lifecyclelogger/src/main/res/layout/activity_main.xml) file.
 
-Now open the [MainActivity](sample02/lifecyclelogger/src/main/java/org/dutchaug/workshop/beginners/lifecyclelogger/MainActivity.java) file in Android Studio. When our acitivyt is created (in **onCreate**) and our contentView is set the layout in the XML file gets _inflated_ by the Android System. This basically means whatever is in the XML file will be used to create a _View hierarchy_ of plain Java objects we can interact with in our code. We can only create references to our views in the layout, if they have a proper **id**. We can reference them by calling the **findViewById(int id)** method like this.
+Now open the [MainActivity](sample02/lifecyclelogger/src/main/java/org/dutchaug/workshop/beginners/lifecyclelogger/MainActivity.java) file in Android Studio. When our acitivity is created (in **onCreate**) and our contentView is set the layout in the XML file gets _inflated_ by the Android System. This basically means whatever is in the XML file will be used to create a _View hierarchy_ of plain Java objects we can interact with in our code. We can only create references to our views in the layout, if they have a proper **id**. We can reference them by calling the **findViewById(int id)** method like this.
 
 ```java
 TextView textView = (TextView) findViewById(R.id.uniquenameforyourview);
