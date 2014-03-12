@@ -179,7 +179,7 @@ The manifest file presents essential information about your app to the Android s
 #### Java source files
 Okay, let's walk around on familiar ground... Java. We only have one class in our Hello World project, the MainActivity class. Let's open up MainActivity.java and see what's inside.
 
-> You can quickly open a class-file by pressing &#8984;-O on a Mac and ctrl-N on a Windows machine.
+> You can quickly open a class-file by pressing `Cmd-O` on a Mac and `Ctrl-N` on a Windows or Linux machine.
 
 ```java
 package org.dutchaug.workshop.beginners.helloworld;
@@ -198,15 +198,15 @@ public class MainActivity extends Activity {
 }
 ```
 
-The **onCreate** method is one of the Activity Life Cycle methods (more on that in [lesson02](../lesson02)) and in plain English, when our activity is created (by the Android system) don't do anything with the saved instance state (we propagate it to our super class) and set the content view layout to **R.layout.activity_main**.
+The **onCreate** method is one of the _Activity Life Cycle_ methods (more on that in [lesson02](../lesson02)). In plain English, when our activity is created (by the Android system) we don't do anything with the saved instance state (we propagate it up to our super class) and set the content view layout to **R.layout.activity_main**.
 
-**R.layout.activity_main** refers to an integer in a generated class with name R. Go ahead, open R.java and see what's inside. See anything familiar? Browse around the **res** folder if this doesn't ring any bells. In short Android keeps references of all the resources in the **res** directory and saves references to these files as public static final integers in the R.java file. Again, this file is generated, so don't change anything in this file directly, change the file (or their contents) in the **ress** directory instead.
+**R.layout.activity_main** refers to an integer in a generated class with name R. Go ahead, open R.java and see what's inside. See anything familiar? Browse around the **res** folder if this doesn't ring any bells. In short Android keeps references of all the resources in the **res** directory and saves references to these files as public static final integers in the R.java file. Again, this file is generated, so don't change anything in this file directly, change the file (or their contents) in the **res** directory instead.
 
 #### Resources
 ![res folder](img/res-folder.png)
 > The Android project resources
 
-A resource is a localized text string, bitmap, video, soundbit or other small piece of noncode information that your program needs. At build time all your resources get compiled into your application. This is useful for internationalization and for supporting multiple device types.
+A resource is a localized text string, bitmap, video, soundbit or other small piece of non-code information that your program needs. At build time all your resources get compiled into your application. This is useful for internationalization and for supporting multiple device types.
 
 You will create and store your resources in the res directory inside your project. The Android resource compiler (aapt) processes resources according to which subfolder they are in and the format of the file. For example, PNG and JPG format bitmaps should go in a directory starting with res/drawable, and XML files that describe screen layouts should go in a directory starting with res/layout. You can add suffixes for particular languages, screen orientations, pixel densities, and more.
 
