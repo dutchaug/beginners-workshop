@@ -258,9 +258,9 @@ Some parameters are common to all layouts:
 * **android:layout_width="match_parent"**, **android:layout_height="wrap_content"** Takes up the entire width and height of the parent (in this case, the window). Possible values are match_parent and wrap_content.
 
 ##Exercises
-> For the following exercises you can open the **Android preview** tool window to see the effect. There's no need to compile and deploy the app on your phone yet.
+> For the following exercises you can use the **Android preview** tool window which opens up when you open the **activity_main.xml** file. There's no need to compile and deploy the app on your phone yet.
 
-1. Change the **android:layout_width** and **android:layout_height** attributes of both the **LinearLayout** and the **TextView** to `wrap_content`. Can you explain what happens?
+1. Open the **activity_main.xml** file and change the **android:layout_width** and **android:layout_height** attributes of both the **LinearLayout** and the **TextView** to `wrap_content`. Can you explain what happens?
 1. Add another **TextView** to the **res/activity_main.xml** layout file and see what happens. Can you predict how the other TextView will be layed out?
 1. Add an attribute **android:orientation="vertical"** to the **LinearLayout** tag. What happens?
 1. Add an attribute **android:textColor="#B20"** to the **TextView** tag.
