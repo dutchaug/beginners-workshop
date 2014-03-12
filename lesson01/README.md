@@ -278,7 +278,7 @@ Some parameters are common to all layouts:
 </shape>
 ```
 
-> Creating shape drawables in XML is a very powerful tool in Android! [This on-line tool](http://angrytools.com/gradient/) can create these gradient XML files for you. Simply click the **Android** tab at the bottom to get the generated XML.
+> Creating [shape drawables](http://developer.android.com/guide/topics/resources/drawable-resource.html#Shape) (as they are called) in XML is a very powerful tool in Android! [This on-line tool](http://angrytools.com/gradient/) can create these gradient XML files for you. Simply click the **Android** tab at the bottom to get the generated XML.
 
 ## Android Tools
 
