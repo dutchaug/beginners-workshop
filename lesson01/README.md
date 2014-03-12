@@ -251,7 +251,7 @@ We already saw a reference to **R.layout.activity_main** in the **onCreate** met
 >
 >[More info](http://developer.android.com/guide/topics/ui/declaring-layout.html)
 
-**LinearLayout** is a **ViewGroup**. It can describes the way it layouts its children (in a linear way). **RelativeLayout** lays out its children _relative_ to other views in the view group, or to the parent border (the RelativeLayout itself). **GridLayout** lays out its children in a grid. There are a couple of other layout managers and it's pretty easy to create a layout manager yourself.
+**LinearLayout** is a **ViewGroup**, which in turn is a **View**. It describes the way it layouts its children (in a _linear_ way). **RelativeLayout** lays out its children _relative_ to other views in the view group, or to the parent border (the RelativeLayout itself). **GridLayout** lays out its children in a grid, etc. There are a couple of other layout managers and it's pretty easy to create a layout manager yourself.
 
 Some parameters are common to all layouts:
 * **xmlns:android="http://schemas.android.com/apk/res/android"** Defines the XML namespace for Android. You should define this once, on the first XML tag in the file.
