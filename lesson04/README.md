@@ -4,7 +4,7 @@
 * Basic understanding of **ListView**s and **Adapter**s
 * Working with the **ArrayAdapter**
 * Creating String Array resources
-* Extending the *BaseAdapter** to create a custom adapter
+* Extending the **BaseAdapter** to create a custom adapter
 * Creating more complex layouts for the list items
 
 ## Introduction

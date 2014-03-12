@@ -37,7 +37,7 @@ This workshop is aimed at the intermediate Java or OO programmer who wants to st
 * Basic understanding of **ListView**s and **Adapter**s
 * Working with the **ArrayAdapter**
 * Creating String Array resources
-* Extending the *BaseAdapter** to create a custom adapter
+* Extending the **BaseAdapter** to create a custom adapter
 * Creating more complex layouts for the list items
 
 **[Lesson 5](lesson05) Creating a simple image viewer app**
