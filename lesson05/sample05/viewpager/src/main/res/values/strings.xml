@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">ListViews</string>
-    <string name="hello">Hello World!</string>
+    <string name="app_name">ViewPager</string>
 
 </resources>
