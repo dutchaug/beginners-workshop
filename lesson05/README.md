@@ -213,7 +213,7 @@ You might have noticed that the **Animal** data object holds a new field, `sound
 In our case we've included ogg vorbis sound bites for every animal in the `mAnimals` data array in the **AnimalPagerAdapter** class.
 
 ##Exercise
-* Open the **AnimalFragment** class and add a new integer field called `soundResource`. This looks a lot like the already defined `imageResource` field so walk through the class definition and add all the necessary code to correctly save and restore the value of this new `soundResource` field.
+* Open your **AnimalFragment** class and add a new integer field called `soundResource`. This looks a lot like the already defined `imageResource` field so walk through the class definition and add all the necessary code to correctly save and restore the value of this new `soundResource` field.
 
 It is good practice to let your fragment know as little as possible about its parent activity. Sometimes your fragments contains a list and when the user clicks on an item in this list it is best to let the containing activity handle the list click. In our case, when a user clicks the image we want to let our **MainActivity** handle this event. One way to do this is define a **Contract** interface in your fragment.
 
