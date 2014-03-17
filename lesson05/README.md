@@ -34,7 +34,10 @@ Most applications should implement at least these three methods for every fragme
 [More info](http://developer.android.com/guide/components/fragments.html)
 
 ##Fragment state
-Let's create a new **AnimalFragment** class with a single **ImageView** which displays the image resource for the given animal.
+1. Import the [sample05](sample05) project in Android Studio
+1. Create a new **AnimalFragment** class with a single **ImageView** which displays the image resource for the given animal.
+
+> **Tip!** You can copy the class definition below, select the `org.dutchaug.workshop.beginners.viewpager` package in Android studio and past the code. The class it automagically created for you!
 
 ```java
 public class AnimalFragment extends Fragment {
