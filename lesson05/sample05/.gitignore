@@ -1,0 +1,6 @@
+.gradle
+/.idea
+/local.properties
+.DS_Store
+*.iml
+atlassian-ide-plugin.xml
