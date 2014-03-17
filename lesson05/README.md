@@ -97,7 +97,7 @@ Then later, in **onCreate** we can use the `getArguments()` method to initialize
     }
 ```
 
-We are good if our fragment is instantiated and created by the Android system. But what about this `savedInstanceState` argument? Whenever this argument is not `null` you should know that your fragment is restored by the system and your are given a saved state bundle to re-initialize your fragment.
+We are good if our fragment is instantiated and created by the Android system. But what about this `savedInstanceState` argument? Whenever this argument is not `null` you should know that your fragment is restored by the system and your are given a saved state bundle to re-initialize your fragment. You cannot rely on the `getArguments` method to return anything useful in this case!
 
 ```java
     @Override
@@ -111,7 +111,7 @@ We are good if our fragment is instantiated and created by the Android system. B
     }
 ```
 
-Whenever an activity, and thus it's fragment is destroyed its state will be saved. You get an opportunity to save your fragment's state by overriding the `public void onSaveInstanceState(Bundle outState)` method. You simply bind your state to the given bundle argument. In our case this means:
+Whenever an activity, and thus it's fragment is destroyed its state will be saved. You get an opportunity to save your fragment's state by overriding the `public void onSaveInstanceState(Bundle outState)` method. You simply bind your fragment state to the given bundle argument. In our case this means:
 ```java
     @Override
     public void onSaveInstanceState(Bundle outState) {
