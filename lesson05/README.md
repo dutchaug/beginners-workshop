@@ -199,12 +199,18 @@ The **PagerAdapater** itself is an abstract class as well, which in turn asks us
     }
 ```
 ##Exercise 05.03
-Revisit the `onCreate` method in our main activity and set the adapter of the `mViewPager` object to a newly created **AnimalPagerAdapter**.
+Revisit the `onCreate` method in the **MainActivity** and set the adapter of the `mViewPager` object to a newly created **AnimalPagerAdapter**.
 
 **Note:** A **FragmentPagerAdapter** requires a **FragmentManager** instance to add its fragment to the user interface. You should use `getSupportFragmentManager()` as the argument.
 
+Okay, you should have implemented enough to see the first implementation of the animal image viewer in practice. Take your project for a spin to see how it works.
+
 ## Playing an animal sound
-You might have noticed that the **Animal** data object holds a new field, `soundResource`. This field is pointing to a so callled _raw_ resource, which basically is any binary resource you want to add to your package and use in your app. In our case we've included ogg vorbis sound bites for every animal in the `mAnimals` data array in the **AnimalPagerAdapter** class.
+You might have noticed that the **Animal** data object holds a new field, `soundResource`. This field is pointing to a so callled _raw_ resource.
+
+> A **raw** resource is basically any binary resource you want to add to your package and use in your app. 
+
+In our case we've included ogg vorbis sound bites for every animal in the `mAnimals` data array in the **AnimalPagerAdapter** class.
 
 ##Exercise
 * Open the **AnimalFragment** class and add a new integer field called `soundResource`. This looks a lot like the already defined `imageResource` field so walk through the class definition and add all the necessary code to correctly save and restore the value of this new `soundResource` field.
