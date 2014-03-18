@@ -155,7 +155,7 @@ The **ViewPager** is just another **View** you can include in your layout's XML 
 Our **MainActivity** can then look something like this:
 
 ```java
-public class MainActivity extends FragmentActivity implements AnimalFragment.Contract {
+public class MainActivity extends FragmentActivity {
 
     private ViewPager mViewPager;
 
@@ -265,6 +265,8 @@ To make a long story short create a new **MediaPlayer** field with name `mp` in 
     }
 ```
 
+> A more convenient approach is to use Jake Wharton's ContractFragment (see [this Gist](https://gist.github.com/JakeWharton/2621173)) which takes care of all the casting and extend your fragments from that class.
+
 That's it! Take your project for a spin!
 
 ## Extra exercises
@@ -272,3 +274,4 @@ That's it! Take your project for a spin!
 * When you click on an image and hear a sound press the back button. Do you still hear a sound? Can you explain what happens? Which activity life cycle method can you override to stop the sound from playing?
 
 ## Conclusion
+The **ViewPager** is a pretty standard view which you will use frequently in your Android apps. Fragments allow you to cut up your UI in smaller portions and with their modularity force you to chop up your app architecture as well. Fragment should know very little to nothing about their parent activities. Any user events happening inside the fragment should be propagated up to its parent activity.
