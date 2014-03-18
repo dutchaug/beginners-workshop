@@ -43,8 +43,7 @@ This workshop is aimed at the intermediate Java or OO programmer who wants to st
 **[Lesson 5](lesson05) Creating a simple image viewer app**
 * Basic understanding of **Fragment**s
 * Basic understanding of **ViewPager**s and the **FragmentPagerAdapter**
-* Asynchronously retrieving images with the Picasso library
-* Playing (animal ;-) sounds
+* Playing (animal ;-) sounds with the **MediaPlayer**
 
 ## What you _won't_ learn in this workshop
 
