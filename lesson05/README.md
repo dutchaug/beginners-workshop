@@ -3,13 +3,12 @@
 ## What you'll learn in this lesson
 * Basic understanding of **Fragment**s
 * Basic understanding of **ViewPager**s and the **FragmentPagerAdapter**
-* Asynchronously retrieving images with the Picasso library
 * Playing (animal ;-) sounds
 
 ## Introduction
-In the previous lesson you learned about the **ListView**. This is a vertically scrolling list of items which fluently scrolls up and down. There is no horizontal **ListView** in the Android SDK, but if you Google for this you will find many open source implementations of views doing exactly this. The [TwoWayView](https://github.com/lucasr/twoway-view) is one of these open source implementations which can horizontally scroll a list of items. However, if you want to horizontally scroll a generic view which is larger than the screen width you can wrap a **ViewGroup** in a [**HorizontalScrollView**](http://developer.android.com/reference/android/widget/HorizontalScrollView.html), which _is_ a standard view.
+In the [previous lesson](../lesson04) you learned about the [**ListView**](http://developer.android.com/guide/topics/ui/layout/listview.html). This is a vertically scrolling list of items which fluently scrolls up and down. There is no horizontal **ListView** in the Android SDK, but if you Google for this you will find many open source implementations of views doing exactly this. The [TwoWayView](https://github.com/lucasr/twoway-view) is one of these open source implementations which can horizontally scroll a list of items. However, if you want to horizontally scroll a generic view which is larger than the screen width you can wrap a **ViewGroup** in a [**HorizontalScrollView**](http://developer.android.com/reference/android/widget/HorizontalScrollView.html), which _is_ a standard view.
 
-In many apps you see another horizontal scroll UI pattern where you can swipe a single _page_. When you drag the view the next view comes into view and when you release the view the control snaps to the nearest view. When you _fling_ it quickly snaps to the next page, but never more than one. (If you fling a **ListView** or a **SrollView** in general it will simple scroll on and slow down and eventually stop at some position).
+In many apps you see another horizontal scroll UI pattern where you can swipe a single _page_. When you drag the view left or right the next view comes into view and when you release the view the control snaps to the _nearest_ view. When you _fling_ it quickly snaps to the next page, but never more than one. (If you fling a **ListView** or a **SrollView** in general it will simple scroll on and slow down and eventually stop at some position).
 
 An implementation of this UI Pattern is the [**ViewPager**](http://developer.android.com/reference/android/support/v4/view/ViewPager.html) which is not part of the standard Android SDK, but was introduced in something called the **Android support package**. This support package is a mechanism to be able port back new functionality and components to be used on lower level Android operating systems. The **ViewPager** needs an implementation of [**PagerAdapter**](http://developer.android.com/reference/android/support/v4/view/PagerAdapter.html) to populate the pages inside the **ViewPager**. The implementation we will use in this lesson is the [**FragmentPagerAdapter**](http://developer.android.com/reference/android/support/v4/app/FragmentPagerAdapter.html) which introduces yet another powerful UI concept, the **Fragment**.
 
@@ -17,11 +16,11 @@ An implementation of this UI Pattern is the [**ViewPager**](http://developer.and
 
 <img src="img/fragment_lifecycle.png" align="right" />
 
-A Fragment represents a behavior or a portion of user interface in an Activity. You can combine multiple fragments in a single activity to build a multi-pane UI and reuse a fragment in multiple activities. You can think of a fragment as a _modular_ section of an activity, which has its own lifecycle, receives its own input events, and which you can add or remove while the activity is running (sort of like a "sub activity" that you can reuse in different activities).
+A Fragment represents a behavior or a portion of user interface in an Activity. You can think of a fragment as a _modular_ and _reusable_ section of an activity, which has its own lifecycle, receives its own input events, and which you can add or remove while the activity is running (sort of like a "sub activity" that you can reuse in different activities).
 
 A fragment must always be embedded in an activity and the fragment's lifecycle is directly affected by the host activity's lifecycle. For example, when the activity is paused, so are all fragments in it, and when the activity is destroyed, so are all fragments.
 
-To create a fragment, you must create a subclass of Fragment (or an existing subclass of it). The Fragment class has code that looks a lot like an Activity. It contains callback methods similar to an activity, such as onCreate(), onStart(), onPause(), and onStop(). In fact, if you're converting an existing Android application to use fragments, you might simply move code from your activity's callback methods into the respective callback methods of your fragment.
+To create a fragment, you must create a subclass of Fragment (or an existing subclass of it). The Fragment class has code that looks a lot like an Activity. It contains callback methods similar to an activity, such as onCreate(), onStart(), onPause(), and onStop(), etc.
 
 Usually, you should implement at least the following lifecycle methods:
 
@@ -40,7 +39,16 @@ Most applications should implement at least these three methods for every fragme
 > **Tip!** You can copy the class definition below, select the `org.dutchaug.workshop.beginners.viewpager` package in Android studio and past the code. The class it automagically created for you!
 
 ```java
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+
 public class AnimalFragment extends Fragment {
+	
+	private static final String ARG_IMAGE_RESOURCE = "image_resource";
 	
 	private int imageResource;
 
@@ -56,14 +64,14 @@ public class AnimalFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ImageView imageView = (ImageView) inflater.inflate(R.layout.fragment_image, container, false);
-		imageView.setImageResource(imageResource);
+		if (imageView != null) imageView.setImageResource(imageResource);
         return imageView;
     }
 
 }
 ```
 
-It is sufficient for the `fragment_image.xml` file to contain a sinlge **ImageView** element:
+The `fragment_image.xml` file is already present and contains a sinlge **ImageView** element:
 ```xml
 <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
            android:layout_width="match_parent"
@@ -73,7 +81,7 @@ It is sufficient for the `fragment_image.xml` file to contain a sinlge **ImageVi
 ```
 > The `android:scaleType="centerCrop"` attribute says to center the image and _crop_ it so it nicely fits the whole area.
 
-Okay, now we need to somehow bind the `imageResource` field to the image resource of a given **Animal** object. We cannot add an animal object as an extra argument to the **onCreate** method, since this is a standard lifecycle method, which is used by the Android system. To add arguments to a fragment we must construct a new **Bundle** (A **Bundle** is a data object which holds a mapping of key-value pairs.) and add it with the `setArguments(Bundle args)` method. A commonly used method for such a construct is to create a `newInstance` method with the arguments you need for initialization, an animal object in our case:
+Okay, now we need to somehow bind the `imageResource` field to the image resource of a given **Animal** object. We cannot add an animal object as an extra argument directly to the **onCreate** method. This is a standard lifecycle method, which is used by the Android system. To add custom arguments to a fragment we must construct a new **Bundle** (A **Bundle** is a data object which holds a mapping of key-value pairs.) and add it with the `setArguments(Bundle args)` method. A commonly used method for such a construct is to create a `newInstance` method with the arguments you need for initialization, an animal object will do in our case:
 
 ```java
     public static AnimalFragment newInstance(Animal animal) {
@@ -97,7 +105,9 @@ Then later, in **onCreate** we can use the `getArguments()` method to initialize
     }
 ```
 
-We are good if our fragment is instantiated and created by the Android system. But what about this `savedInstanceState` argument? Whenever this argument is not `null` you should know that your fragment is restored by the system and your are given a saved state bundle to re-initialize your fragment. You cannot rely on the `getArguments` method to return anything useful in this case!
+It might be a bit cumbersome at first, but this is the correct way to initialize your fragment. 
+
+We are good if our fragment is instantiated and created by the Android system. But what about this `savedInstanceState` argument? Whenever this argument is not `null` you should know that your fragment is restored by the system and your are given a _saved instance state bundle_ to re-initialize your fragment. You cannot rely on the `getArguments` method to return anything useful in this case!
 
 ```java
     @Override
@@ -111,7 +121,7 @@ We are good if our fragment is instantiated and created by the Android system. B
     }
 ```
 
-Whenever an activity, and thus it's fragment is destroyed its state will be saved. You get an opportunity to save your fragment's state by overriding the `public void onSaveInstanceState(Bundle outState)` method. You simply bind your fragment state to the given bundle argument. In our case this means:
+Whenever an activity, and thus its fragment is destroyed its state will be saved. You get an opportunity to save your fragment's state by overriding the `public void onSaveInstanceState(Bundle outState)` method. You simply bind your fragment state to the given bundle argument. In our case this means:
 ```java
     @Override
     public void onSaveInstanceState(Bundle outState) {
@@ -179,7 +189,7 @@ The **ViewPager** needs an implementation of **PagerAdapter** as a data-view bin
     }
 ```
 
-The **FragmentPagerAdapter** is an absract class which asks us to implement one method: `public Fragment getItem(int position)`. 
+The **FragmentPagerAdapter** is an abstract class which asks us to implement one method: `public Fragment getItem(int position)`. 
 
 ## Exercise 05.01
 Simply return a new **AnimalFragment** in the `public Fragment getItem(int position)` method.
