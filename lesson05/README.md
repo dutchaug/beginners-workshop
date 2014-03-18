@@ -3,7 +3,7 @@
 ## What you'll learn in this lesson
 * Basic understanding of **Fragment**s
 * Basic understanding of **ViewPager**s and the **FragmentPagerAdapter**
-* Playing (animal ;-) sounds
+* Playing (animal ;-) sounds with the **MediaPlayer**
 
 ## Introduction
 In the [previous lesson](../lesson04) you learned about the [**ListView**](http://developer.android.com/guide/topics/ui/layout/listview.html). This is a vertically scrolling list of items which fluently scrolls up and down. There is no horizontal **ListView** in the Android SDK, but if you Google for this you will find many open source implementations of views doing exactly this. The [TwoWayView](https://github.com/lucasr/twoway-view) is one of these open source implementations which can horizontally scroll a list of items. However, if you want to horizontally scroll a generic view which is larger than the screen width you can wrap a **ViewGroup** in a [**HorizontalScrollView**](http://developer.android.com/reference/android/widget/HorizontalScrollView.html), which _is_ a standard view.
