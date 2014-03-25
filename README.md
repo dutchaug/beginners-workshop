@@ -12,10 +12,13 @@ This workshop is aimed at the intermediate Java or OO programmer who wants to st
 * Fire up Android Studio and check that you have the latest **Tools**, **Android platform** and *Extras** installed. You can access the SDK manager by clicking on the SDK Manager Icon ![SDK Manager Icon](img/sdk-manager-studio.png) in the toolbar. Your configuration should look something like this
 
 ![SDK Tools](img/sdk-tools.png)
+> You only need the latest versions of the **Tools**, **Platform-tools** and **Build-tools**
 
 ![Android 4.4.2 API 19](img/sdk-android-api-19.png)
+> Simply click the checkbox before the **Android 4.4.2 (API 19)** folder to select everything
 
 ![Extras](img/sdk-extras.png)
+> Again, if you have the hard disk space, simply install everything in the **Extras** section for the workshop
 
 * Preferably we would like you to connect your phone to your computer and run and test the samples on a real device. If you don't own an Android device you can install an Android emulator, also known as an Android Virtual Device (AVD). Install at least one Android Virtual Device (AVD) running Jelly Bean, but preferably KitKat, for this workshop. All the capabilities of the AVD Manager are accessible directly from the Android Studio interface. Click the AVD Manager Icon ![AVD Manager Icon](img/avd-manager-studio.png) in the toolbar to open it and create new AVDs. **Note: If you connect your Android device to a Windows machine make sure you have installed the correct device driver for your Android device. If you have ever succesfully connected your Android device to your PC you probably already have it.**
 

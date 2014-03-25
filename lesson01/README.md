@@ -26,12 +26,12 @@ In Android Studio, chose **File > Import Project...**
 ...or select the **Import Project...** option from the quick start menu 
 
 ![The Quick Start Menu](img/as-quick-start-menu.png)
->The Quick Start Menu
+> The Quick Start Menu
 
 Then select the **sample01** folder from the folder where you cloned the **beginners-workshop** Github repository.
 
 ![Select Gradle Project import](img/as-project-import.png)
->Android Studio _might_ ask you to choose the type of project you are importing. If this is the case, make sure to choose **Import project from external model** and select the **Gradle** option.
+> Android Studio _might_ ask you to choose the type of project you are importing. If this is the case, make sure to choose **Import project from external model** and select the **Gradle** option.
 
 If all's well Android Studio will start to build your project right away.
 
