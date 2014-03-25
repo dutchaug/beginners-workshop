@@ -187,7 +187,7 @@ An activity is a single, focused thing that the user can do. Almost all activiti
 * **onCreate(Bundle)** is where you initialize your activity. Most importantly, here you will usually call `setContentView(int)` with a layout resource defining your UI, and using `findViewById(int)` to retrieve the widgets in that UI that you need to interact with programmatically. But more on that in [lesson 2](../lesson02)
 * **onPause()** is where you deal with the user leaving your activity. Most importantly, any changes made by the user should at this point be saved.
 
-To be of any use all activity classes must have a corresponding `&lt;activity&gt;` declaration in their package's **AndroidManifest.xml**.
+To be of any use all activity classes must have a corresponding `<activity>` declaration in their package's **AndroidManifest.xml**.
 
 We only have one activity in our Hello World project, the **MainActivity**. Let's open up [MainActivity.java](sample01/helloworld/src/main/java/org/dutchaug/workshop/beginners/helloworld/MainActivity.java) and see what's inside.
 
