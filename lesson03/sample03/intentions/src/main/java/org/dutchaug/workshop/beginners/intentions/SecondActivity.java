@@ -53,6 +53,7 @@ public class SecondActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        // TODO
+        // TODO Exercise 03.02
     }
+
 }
