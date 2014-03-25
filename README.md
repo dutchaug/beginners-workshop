@@ -9,6 +9,10 @@ This workshop is aimed at the intermediate Java or OO programmer who wants to st
   * All the Android SDK Tools to design, test, debug, and profile your app. 
   * The latest Android platform to compile your app. 
   * The latest Android system image to run your app in the emulator
+
+![Android Studio Check for updates](img/android-studio-check-for-updates.png)
+
+* After you have installed **Android Studio** you might need to update to the latest version (v0.5.2 was the latest end of March 2014)
 * Fire up Android Studio and check that you have the latest **Tools**, **Android platform** and *Extras** installed. You can access the SDK manager by clicking on the SDK Manager Icon ![SDK Manager Icon](img/sdk-manager-studio.png) in the toolbar. Your configuration should look something like this
 
 ![SDK Tools](img/sdk-tools.png)
