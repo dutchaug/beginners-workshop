@@ -45,9 +45,9 @@ At the root of the project folder you can see various gradle files. You can use 
 
 The **build.gradle**, **gradle.properties** and **settings.gradle** files describe how to build the helloworld project.
 
-* The **settings.gradle** file describes which sub-projects to include. This is only the **helloworld** project folder in our case
-* The **build.gradle** file in the root folder describes the necessary dependencies for the build itself and a common setup for all projects
-* The **helloworld/build.gradle** describes how to build our Android project. It applies an android plugin and describes the configuration.
+* The [**settings.gradle**](sample01/settings.gradle) file describes which sub-projects to include. This is only the **helloworld** project folder in our case
+* The [**build.gradle**](sample01/build.gradle) file in the root folder describes the necessary dependencies for the build itself and a common setup for all projects
+* The [**helloworld/build.gradle**](sample01/helloworld/build.gradle) describes how to build our Android project. It applies an android plugin and describes the configuration.
 
 The **gradlew** and **gradlew.bat** scripts (for unix resp. Windows environments) are gradle _wrapper_ scripts. You can run a build on the command line using this script. It requires a certain Gradle version and if it is not present it downloads the binaries on the fly. The **gradlew** scripts and **gradle** directory are added automatically when you create a project with the Android Studio New Project Wizard.
 
