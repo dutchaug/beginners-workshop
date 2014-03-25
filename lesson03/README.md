@@ -1,7 +1,10 @@
 # Lesson 3<br/>Intents, Tasks and the Activity Back Stack
 
 ## What you'll learn in this lesson
-* 
+* Basic understanding of tasks and the _activity back stack_
+* Move from one **Activity** to another with _explicit_ and _implicit_ **Intents**
+
+If you know all about the learning goals for this lesson move on to [lesson 4](../lesson04)
 
 ## Introduction
 An application usually contains multiple activities. Each activity should be designed around a specific kind of action the user can perform and can start other activities. For example, an email application might have one activity to show a list of new email. When the user selects an email, a new activity opens to view that email.

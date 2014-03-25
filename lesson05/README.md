@@ -1,8 +1,8 @@
 # Lesson 5<br/>Creating a simple image viewer app
 
 ## What you'll learn in this lesson
-* Basic understanding of **Fragment**s
-* Basic understanding of **ViewPager**s and the **FragmentPagerAdapter**
+* Basic understanding of **Fragments**
+* Basic understanding of **ViewPagers** and the **FragmentPagerAdapter**
 * Playing (animal ;-) sounds with the **MediaPlayer**
 
 ## Introduction

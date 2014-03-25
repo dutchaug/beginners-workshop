@@ -1,11 +1,13 @@
 # Lesson 4<br/>ListViews and Adapters
 
 ## What you'll learn in this lesson
-* Basic understanding of **ListView**s and **Adapter**s
+* Basic understanding of **ListViews** and **Adapters**
 * Working with the **ArrayAdapter**
 * Creating String Array resources
 * Extending the **BaseAdapter** to create a custom adapter
 * Creating more complex layouts for the list items
+
+If you know all about the learning goals for this lesson move on to [lesson 5](../lesson05)
 
 ## Introduction
 One of the most frequently used views in Android apps is the [**ListView**](http://developer.android.com/guide/topics/ui/layout/listview.html). It's also one of the more complex views and can become pretty cumbersome to work with if you don't play by the rules. Lists can be huge and its child views can be complex. If you don't _do it the right way_ you might experience a bad performing scroll or other odd behaviour. We hope to give you a solid introduction to good use of this powerful view.
