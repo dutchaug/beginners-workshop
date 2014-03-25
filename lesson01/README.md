@@ -6,10 +6,7 @@
   * Learn about the **AndroidManifest.xml** file
   * Know where the java source files are located
   * Understand the basics of resources
-* Know the basics about and how to start the Android Tools from Android Studio
-  * The Android SDK Manager 
-  * The Android Virtual Device (AVD) Manager
-  * The Device Debug Monitoring System (DDMS)
+  * Learn about **shape drawables**
   
 If you know all about the learning goals for this lesson move on to [lesson 2](../lesson02)
 
@@ -272,11 +269,11 @@ Some parameters are common to all layouts:
 ##Exercises
 > For the following exercises you can use the **Android preview** tool window which opens up when you open the **activity_main.xml** file. There's no need to compile and deploy the app on your phone yet.
 
-1. Open the **activity_main.xml** file and change the **android:layout_width** and **android:layout_height** attributes of both the **LinearLayout** and the **TextView** to `wrap_content`. Can you explain what happens?
+1. Open the **activity_main.xml** file and change the **android:layout_width** and **android:layout_height** attributes of both the **LinearLayout** and the **TextView** to either `match_parent` or `wrap_content`. Play around with different combinations. Can you explain what happens?
 1. Add another **TextView** to the **res/activity_main.xml** layout file and see what happens. Can you predict how the other TextView will be layed out?
 1. Add an attribute **android:orientation="vertical"** to the **LinearLayout** tag. What happens?
 1. Add an attribute **android:textColor="#B20"** to the **TextView** tag. Try to find other text attributes you can change.
-1. Create a new resource file with name **res/drawable/background.xml** and add the xml below to that file. Now add an attribute **android:background="@drawable/background"** to the **LinearLayout** tag in the **activity_main.xml** file.
+1. Create a new resource file with name **res/drawable/background.xml** and add the xml below to that file. Now add an attribute **android:background="@drawable/background"** to the **LinearLayout** or one of the **TextView** tags in the **activity_main.xml** file.
 
 ```xml
 <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
@@ -292,15 +289,5 @@ Some parameters are common to all layouts:
 
 > Creating [shape drawables](http://developer.android.com/guide/topics/resources/drawable-resource.html#Shape) (as they are called) in XML is a very powerful tool in Android! [This on-line tool](http://angrytools.com/gradient/) can create these gradient XML files for you. Simply click the **Android** tab at the bottom to get the generated XML.
 
-## Android Tools
-
-### SDK Manager
-
-### AVD Manager
-
-### DDMS
-
 ##Conclusion
-TODO
-
-On to [lesson 2](../lesson02)
+This simple hello world app is only scratching the surface of what Android can do, but it gives you great insight in how Android Studio works. On to [lesson 2](../lesson02) where you will learn more about Activities and the Activity Life Cycle, more Views and how to interact with these Views in your code.
