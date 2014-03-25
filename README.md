@@ -18,7 +18,7 @@ This workshop is aimed at the intermediate Java or OO programmer who wants to st
 > Simply click the checkbox before the **Android 4.4.2 (API 19)** folder to select everything
 
 ![Extras](img/sdk-extras.png)
-> Again, if you have the hard disk space, simply install everything in the **Extras** section for the workshop
+> Again, if you have the hard disk space, simply install everything in the **Extras** section for the workshop. FYI The **Google USB Driver** is only compatible with Windows machines. So install that if you run Android Studio on windows and want to connect your dev phone via a USB cable.
 
 * Preferably we would like you to connect your phone to your computer and run and test the samples on a real device. If you don't own an Android device you can install an Android emulator, also known as an Android Virtual Device (AVD). Install at least one Android Virtual Device (AVD) running Jelly Bean, but preferably KitKat, for this workshop. All the capabilities of the AVD Manager are accessible directly from the Android Studio interface. Click the AVD Manager Icon ![AVD Manager Icon](img/avd-manager-studio.png) in the toolbar to open it and create new AVDs. **Note: If you connect your Android device to a Windows machine make sure you have installed the correct device driver for your Android device. If you have ever succesfully connected your Android device to your PC you probably already have it.**
 
