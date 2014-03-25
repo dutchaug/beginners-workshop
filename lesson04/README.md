@@ -138,4 +138,4 @@ The **ListView** and extending the **BaseAdapter** are powerful tools to create 
 * show [multiple views types in your list](http://antew.com/?p=162).
 * If you work with databases you will probably start extending the [**CursorAdapter**](http://developer.android.com/reference/android/widget/CursorAdapter.html) and you should definitely investiga the [**Loaders** pattern](http://developer.android.com/guide/components/loaders.html) for _asynchronously_ loading the data and automatically updating the list when items in the database change.
 
-On to [lesson 5](../lesson05) where you will learn about the **ViewPager** UI pattern and playing sounds with the **MediaPlayer**.
+On to [lesson 5](../lesson05) where you will learn about **Fragments**, the **ViewPager** UI pattern and playing sounds with the **MediaPlayer**.

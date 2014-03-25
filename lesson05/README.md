@@ -274,4 +274,4 @@ That's it! Take your project for a spin!
 * When you click on an image and hear a sound press the back or the home button. Do you still hear a sound? Can you explain what happens? Which activity life cycle method can you override to stop the sound from playing?
 
 ## Conclusion
-The **ViewPager** is a pretty standard view which you will use frequently in your Android apps. Fragments allow you to cut up your UI in smaller portions and with their modularity force you to chop up your app architecture as well. Fragment should know very little to nothing about their parent activities. Any user events happening inside the fragment should be propagated up to its parent activity.
+The **ViewPager** is a pretty standard view which you will use frequently in your Android apps. **Fragments** allow you to cut up your UI in smaller portions and with their modularity force you to chop up your app architecture as well. Fragment should know very little to nothing about their parent activities. Any user events happening inside the fragment should be propagated up to its parent activity.
