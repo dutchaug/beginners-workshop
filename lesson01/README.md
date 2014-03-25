@@ -144,7 +144,7 @@ jni/
 > Note: Don't confuse the `src/main/resources` and the `src/main/java/res` folders. The former is for pure Java builds and the latter is used for Android resources.
 
 #### AndroidManifest.xml
-Every application must have an AndroidManifest.xml file (with precisely that name) in its root directory. Let's open up the AndroidManifest.xml file of the helloworld app which lives in the in `sample01/helloworld/src/main` folder.
+Every application must have an AndroidManifest.xml file (with precisely that name) in its root directory. Let's open up the **AndroidManifest.xml** file of the helloworld app which lives in the in `sample01/helloworld/src/main` folder.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -178,10 +178,18 @@ The manifest file presents essential information about your app to the Android s
 
 [More info](http://developer.android.com/guide/topics/manifest/manifest-intro.html)
 
-#### Java source files
-Okay, let's walk around on familiar ground... Java. We only have one class in our Hello World project, the **MainActivity** class. Let's open up [MainActivity.java](sample01/helloworld/src/main/java/org/dutchaug/workshop/beginners/helloworld/MainActivity.java) and see what's inside.
+#### The Main Activity
 
-> You can quickly open a class-file by pressing `Cmd-O` on a Mac and `Ctrl-N` on a Windows or Linux machine. Tip: Type `Cmd-Shift-A` on a Mac or `Ctrl-Shift-A` to browse through the various keyboard shortcuts. Or download a PDF file with the most common keyboard shortcuts for [Windows or Linux](http://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard.pdf) or [Mac OS X](http://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard_Mac.pdf)
+An activity is a single, focused thing that the user can do. Almost all activities interact with the user, so the Activity class takes care of creating a window for you in which you can place your UI with `setContentView(View)`. There are two methods almost all subclasses of Activity will implement:
+
+* **onCreate(Bundle)** is where you initialize your activity. Most importantly, here you will usually call `setContentView(int)` with a layout resource defining your UI, and using `findViewById(int)` to retrieve the widgets in that UI that you need to interact with programmatically. But more on that in [lesson 2](../lesson02)
+* **onPause()** is where you deal with the user leaving your activity. Most importantly, any changes made by the user should at this point be saved.
+
+To be of any use all activity classes must have a corresponding `&lt;activity&gt;` declaration in their package's **AndroidManifest.xml**.
+
+We only have one activity in our Hello World project, the **MainActivity**. Let's open up [MainActivity.java](sample01/helloworld/src/main/java/org/dutchaug/workshop/beginners/helloworld/MainActivity.java) and see what's inside.
+
+> You can quickly open a class-file by pressing `Cmd-O` on a Mac and `Ctrl-N` on a Windows or Linux machine. **Tip:** Type `Cmd-Shift-A` on a Mac or `Ctrl-Shift-A` to browse through the various keyboard shortcuts. Or download a PDF file with the most common keyboard shortcuts for [Windows or Linux](http://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard.pdf) or [Mac OS X](http://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard_Mac.pdf)
 
 ```java
 package org.dutchaug.workshop.beginners.helloworld;
@@ -200,9 +208,9 @@ public class MainActivity extends Activity {
 }
 ```
 
-The **onCreate** method is one of the _Activity Life Cycle_ methods (more on that in [lesson02](../lesson02)). In plain English, when our activity is created (by the Android system) we don't do anything with the saved instance state (we propagate it up to our super class) and set the content view layout to **R.layout.activity_main**.
+The **onCreate** method is one of the _Activity Life Cycle_ methods (more on that in [lesson02](../lesson02)). In plain English, when our activity is created (by the Android system) we don't do anything with the saved instance state (whatever that is, we simply propagate it up to our super class) and set the content view layout to **R.layout.activity_main**.
 
-**R.layout.activity_main** refers to an integer in a generated class with name R. Go ahead, open R.java and see what's inside. See anything familiar? Browse around the **res** folder if this doesn't ring any bells. In short Android keeps references of all the resources in the **res** directory and saves references to these files as public static final integers in the R.java file. Again, this file is generated, so don't change anything in this file directly, change the file (or their contents) in the **res** directory instead.
+**R.layout.activity_main** refers to an integer in a generated class with name **R**. Go ahead, open `R.java` and see what's inside. See anything familiar? Browse around the **res** folder, which probably will ring some bells. In short Android keeps references of all the resources in the **res** directory and saves references to these files as public static final integers in the R.java file. Again, this file is generated, so don't change anything in this file directly, change the file name (or their contents) in the **res** directory instead.
 
 #### Resources
 ![res folder](img/res-folder.png)
