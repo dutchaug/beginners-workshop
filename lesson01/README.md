@@ -110,7 +110,7 @@ The **minSdkVersion** version states which Android OS level you minimally suppor
 
 The **targetSdkVersion** informs the system that you have tested against the target version and the system should not enable any compatibility behaviors to maintain your app's forward-compatibility with the target version. The application is still able to run on older versions (down to **minSdkVersion**). To maintain your application along with each Android release, you should increase the value of this attribute to match the latest API level, then thoroughly test your application on the corresponding platform version.
 
-The **versionCode** is a value which is used mainly for distribution on Google Play. Every update should have a higher version code than the previous package.
+The **versionCode** is a value which is used mainly for distribution on the [Google Play Store](https://play.google.com/store/apps). Every update should have a higher version code than the previous package. Don't worry about forgetting this. When you upload your app to the Play Store you will be notified if this is not the case.
 
 The **versionName** value is a user-friendly name for the app version and can be any string. This value is visible to the end-users on Google Play.
 
@@ -140,6 +140,8 @@ aidl/
 rs/
 jni/
 ```
+
+> Note: Don't confuse the `src/main/resources` and the `src/main/java/res` folders. The former is for pure Java builds and the latter is used for Android resources.
 
 #### AndroidManifest.xml
 Every application must have an AndroidManifest.xml file (with precisely that name) in its root directory. Let's open up the AndroidManifest.xml file of the helloworld app which lives in the in `sample01/helloworld/src/main` folder.
@@ -177,9 +179,9 @@ The manifest file presents essential information about your app to the Android s
 [More info](http://developer.android.com/guide/topics/manifest/manifest-intro.html)
 
 #### Java source files
-Okay, let's walk around on familiar ground... Java. We only have one class in our Hello World project, the MainActivity class. Let's open up MainActivity.java and see what's inside.
+Okay, let's walk around on familiar ground... Java. We only have one class in our Hello World project, the **MainActivity** class. Let's open up [MainActivity.java](sample01/helloworld/src/main/java/org/dutchaug/workshop/beginners/helloworld/MainActivity.java) and see what's inside.
 
-> You can quickly open a class-file by pressing `Cmd-O` on a Mac and `Ctrl-N` on a Windows or Linux machine.
+> You can quickly open a class-file by pressing `Cmd-O` on a Mac and `Ctrl-N` on a Windows or Linux machine. Tip: Type `Cmd-Shift-A` on a Mac or `Ctrl-Shift-A` to browse through the various keyboard shortcuts. Or download a PDF file with the most common keyboard shortcuts for [Windows or Linux](http://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard.pdf) or [Mac OS X](http://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard_Mac.pdf)
 
 ```java
 package org.dutchaug.workshop.beginners.helloworld;
