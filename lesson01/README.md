@@ -16,7 +16,7 @@ If you know all about the learning goals for this lesson move on to [lesson 2](.
 ## Android Studio
 
 ### Importing an Android project in Android Studio
-Android Studio contains a new project wizard which is started by chosing **File > New Project...**. However convenient it also poses a lot of questions, settings and steps which might be a bit too overwhelming at this point. For this workshop we would like to teach you how to import an existing Android project so we can keep the project contents consise to what is needed in the sample or exercise. In this lesson we are going to import a very tiny "Hello World" app. Before we do this please clone the **beginners-workshop** Github repository by typing `git clone git@github.com:dutchaug/beginners-workshop.git` in an empty folder.
+Android Studio contains a new project wizard which is started by chosing **File > New Project...**. However convenient it also poses a lot of questions, settings and steps which might be a bit too overwhelming at this point. For this workshop we would like to teach you how to import an existing Android project so we can keep the project contents consise to what is needed in the sample or exercise. In this lesson we are going to import a very tiny "Hello World" app. Before we do this please clone this **beginners-workshop** Github repository to your local machine by typing `git clone git@github.com:dutchaug/beginners-workshop.git` in an empty folder.
 
 In Android Studio, chose **File > Import Project...** 
 
