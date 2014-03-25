@@ -225,7 +225,7 @@ You will create and store your resources in the res directory inside your projec
 The resource compiler compresses and packs your resources and then generates a class named R that contains identifiers you use to reference those resources in your program. This is a little different from standard Java resources, which are referenced by key strings. Doing it this way allows Android to make sure all your references are valid and saves space by not having to store all those resource keys.
 
 ##### Resource quantifiers
-You might have noticed there are several **drawable** directories with different suffixes. These suffixes are called qualifiers and narrow down for which devices these resources should be used. In the drawable case, all the default drawables go into the **drawable** directory directory. Any optimized images for e.g. a high density (hdpi), medium density (mdpi) or extra high density (xhdpi) screen go into the **drawable-hdpi**, **drawable-mdpi** and **drawable-xhdpi** directories respectively. Drawables in these directories _override_ any drawables in less specific / qualified directories. [More info](http://developer.android.com/guide/practices/screens_support.html)
+You might have noticed there are several **drawable** directories with different suffixes. These suffixes are called _qualifiers_ and narrow down for which devices these resources should be used. In the drawable case, all the default drawables go into the **drawable** directory directory. Any optimized images for e.g. a high density (hdpi), medium density (mdpi) or extra high density (xhdpi) screen go into the **drawable-hdpi**, **drawable-mdpi** and **drawable-xhdpi** directories respectively. Drawables in these directories _override_ any drawables in less specific / qualified directories. [More info](http://developer.android.com/guide/practices/screens_support.html)
 
 ##### Localization resources
 In the **res/values** directory we see a **strings.xml** file. This file contains one _string-resource_ with name `app_name`.
@@ -237,7 +237,7 @@ Suppose that your application's default language is English. Suppose also that y
 
 [More info](http://developer.android.com/guide/topics/resources/localization.html)
 
-> Localization is not only for strings. You can localize any resource type by adding the **-&lt;locale&gt;** suffix, e.g. **res/drawable-nl** could contain images with e.g. dutch language.
+> Localization is not only for strings. You can localize any resource type by adding the **-&lt;locale&gt;** suffix, e.g. **res/drawable-nl** could contain images with e.g. Dutch sentences.
 
 #### Layouts
 We already saw a reference to **R.layout.activity_main** in the **onCreate** method in MainActivity.java. This integer points to the file **res/activity_main.xml**. Let's open that file.
