@@ -237,7 +237,7 @@ Suppose that your application's default language is English. Suppose also that y
 
 [More info](http://developer.android.com/guide/topics/resources/localization.html)
 
-> Localization is not only for strings. You can localize any resource type by adding the **-&lt;locale&gt;** suffix, e.g. **res/drawable-nl** could contain images with e.g. Dutch sentences.
+> Localization is not only for strings. You can localize any resource type by adding the **-&lt;locale&gt;** suffix, e.g. **res/drawable-nl** could contain images with e.g. Dutch words.
 
 #### Layouts
 We already saw a reference to **R.layout.activity_main** in the **onCreate** method in MainActivity.java. This integer points to the file **res/activity_main.xml**. Let's open that file.
