@@ -85,7 +85,7 @@ apply plugin: 'hugo'
 
 And than add the `@DebugLog` annotation to any method you want to _debug log_.
 
-A couple of the Activity life cycle methods in the [MainActivity](sample02/lifecyclelogger/src/main/java/org/dutchaug/workshop/beginners/lifecyclelogger/MainActivity.java) in [sample02](sample02) are annotated with the `@DebugLog` annotation. Take that project for a spin to get a grasp of how your activity is managed by the system.
+A couple of the Activity life cycle methods in the [MainActivity](sample02/lifecyclelogger/src/main/java/org/dutchaug/workshop/beginners/lifecyclelogger/MainActivity.java) in [sample02](sample02) are annotated with the `@DebugLog` annotation. Take that project for a spin to get a grasp of how your activity is managed by the system. Tip, rotate your device and see what happens. Can you explain why this happens?
 
 ## Exercises
 
