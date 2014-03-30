@@ -32,6 +32,13 @@ Then select the **sample01** folder from the folder where you cloned the **begin
 
 If all's well Android Studio will start to build your project right away.
 
+![Run Project](img/run-project.png)
+> After your project is build you can take your project for a spin. Simply click the green run button in the toolbar, select **Run 'helloworld'** from the Run menu or by pressing `Ctrl-R` on a Mac or `Shift-F10` on Windows or Linux. 
+
+If you want to run the sample01 app on your device the first thing you need to do is **enable USB debugging** on the device itself (by starting the Settings application and selecting **{} Developer Options** > **USB Debugging**). If you don't see the developer options item in your settings menu and you are running Android 4.0 (Ice Cream Sandwich) or higher you can enable them by clicking on the **About Phone** settings item a couple of times. If you run an older Android version the **USB Debugging** checkbox might reside in the **Applications** section of your settings. 
+
+You must also allow installation of apps from sources other than the Play Store by checking **Unknown Sources** in the security settings (on most phones). Windows users should install the Android USB device driver. Now it’s simply a matter of plugging in your phone and running the Android application by clicking the run button in Android Studio
+
 ### The Android Project structure
 If you have imported the **sample01** project successfully you will end up with a project structure like this
 
