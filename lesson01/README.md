@@ -33,7 +33,7 @@ Then select the **sample01** folder from the folder where you cloned the **begin
 If all's well Android Studio will start to build your project right away.
 
 ![Run Project](img/run-project.png)
-> After your project is build you can take your project for a spin. Simply click the green run button in the toolbar, select **Run 'helloworld'** from the Run menu or by pressing `Ctrl-R` on a Mac or `Shift-F10` on Windows or Linux. If all's well you will be prompted to run the app on a device, or you can select an emulator. Click `Use same device for future launches` to skip this dialog on the next run.
+> After your project is build you can take your project for a spin. Simply click the green run button in the toolbar, select **Run 'helloworld'** from the Run menu or by pressing `Ctrl-R` on a Mac or `Shift-F10` on Windows or Linux. If all's well you will be prompted to run the app on a device, or you can select an emulator. Check the `Use same device for future launches` checkbox to skip this dialog on the next run.
 
 If you want to run the sample01 app on your device the first thing you need to do is **enable USB debugging** on the device itself (by starting the Settings application and selecting **{} Developer Options** > **USB Debugging**). If you don't see the developer options item in your settings menu and you are running Android 4.0 (Ice Cream Sandwich) or higher you can enable them by clicking on the **About Phone** settings item a couple of times. If you run an older Android version the **USB Debugging** checkbox might reside in the **Applications** section of your settings. 
 
