@@ -111,7 +111,7 @@ TextView textView = (TextView) findViewById(R.id.uniquenameforyourview);
 Go ahead and hook-up all the views in the **onCreate** method in [MainActivity](sample02/lifecyclelogger/src/main/java/org/dutchaug/workshop/beginners/lifecyclelogger/MainActivity.java). Make _fields_ out of the view references while you are at it, so you can reference them from other methods in your class (not just the onCreate method).
 
 ### Interacting with the views
-You can [click on any view](http://developer.android.com/reference/android/view/View.html#setOnClickListener(android.view.View.OnClickListener)) in Android, but **Buttons** are, of course, the ideal click views. You can listen to a button click by implementing- and adding a **View.OnCLickListener** to your button.
+You can [click on any view](http://developer.android.com/reference/android/view/View.html#setOnClickListener(android.view.View.OnClickListener)) in Android, but **Buttons** are, of course, the ideal things to click on. You can listen to a button click by implementing- and adding a **View.OnCLickListener** to your button.
 
 ```java
 button.setOnClickListener(this);
