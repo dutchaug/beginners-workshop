@@ -121,7 +121,7 @@ TextView textView = (TextView) convertView.findViewById(R.id.animal_name);
 
 At the end of the `getView` method you should return the updated `convertView` which will be used as an item in the list view.
 
-Okay, let's see this in action.
+Okay, let's see this in action with some data.
 
 ##Exercise 04.03
 1. Import [sample04](sample04) in Android Studio (if you have not done that already in the previous exercises)

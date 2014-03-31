@@ -70,7 +70,7 @@ startActivity(Intent.createChooser(intent, "Send mail..."));
 1. Implement the following code: 
   * Retrieve the e-mail message from the **EditText** view.
   * Create an implicit intent to send an e-mail and pass the retrieved e-mail address, subject and message in an intent extra.
-1. On the command line type `adb shell dumpsys activity` and try to interprete the output.
+1. On the command line type `adb shell dumpsys activity` and try to interpret the output.
   
 > Notice that you don't need any special permissions to use implicit intents to chain another activity to task. You are basically leaving the end user in control of how and what will be done with their data. They can simply cancel the e-mail composition by pressing the back button. If you want to send e-mail directly from your app, without user intervention you must at least request the [INTERNET](http://developer.android.com/reference/android/Manifest.permission.html#INTERNET) persmission and do all the SMTP preparing and sending yourself. [Here](http://mobiledevtuts.com/android/android-sdk-smtp-email-tutorial/)'s a tutorial which uses [JavaMail for Android](https://code.google.com/p/javamail-android/) to achieve this task.
 
