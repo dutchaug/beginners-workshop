@@ -43,7 +43,7 @@ to setup your Android development environment.
 ## Setting up your workshop development environment
 This workshop is aimed at the intermediate Java or OO programmer who wants to start with native Android development. As a prerequisite we ask you to setup a working Android development environment. Please check if you have already installed (if not download and install) the following software on your computer:
 
-* A [Git](http://git-scm.com/downloads) client or command line tool to clone this repository
+* A [Git](http://git-scm.com/downloads) client or command line tool to clone this repository. [Sourcetree](http://www.sourcetreeapp.com/) is a pretty cool Git GUI client.
 * A [Java Software Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/index.html) version 6 on a Mac or version 6 or 7 if you are using a Windows or Linux machine. I advice against using JDK 8 for this workshop. A Java Runtime Environment (JRE) is not enough!
 * The [Android Studio](http://developer.android.com/sdk/installing/studio.html) bundle, which includes: 
   * The Android Studio early access preview IDE, which is based on the community edition of IntelliJ IDEA. 
