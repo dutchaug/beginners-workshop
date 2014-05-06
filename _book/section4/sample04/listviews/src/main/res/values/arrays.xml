@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="activities">
+        <item>ListView in layout</item>
+        <item>ListActivity</item>
+        <item>Custom adapter</item>
+    </string-array>
+    <string-array name="animals">
+        <item>bear</item>
+        <item>cat</item>
+        <item>chicken</item>
+        <item>chimpansee</item>
+        <item>cow</item>
+        <item>dog</item>
+        <item>donkey</item>
+        <item>elephant</item>
+        <item>frog</item>
+        <item>goat</item>
+        <item>goose</item>
+        <item>horse</item>
+        <item>kitten</item>
+        <item>lion</item>
+        <item>monkey</item>
+        <item>pig</item>
+        <item>rooster</item>
+        <item>seal</item>
+        <item>sheep</item>
+        <item>tiger</item>
+        <item>turkey</item>
+        <item>whale</item>
+        <item>wolf</item>
+    </string-array>
+</resources>
