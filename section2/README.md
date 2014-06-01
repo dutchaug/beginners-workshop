@@ -117,7 +117,7 @@ You can [click on any view](http://developer.android.com/reference/android/view/
 button.setOnClickListener(this);
 ```
 
-What we are saying here is that our **MainActivity** should implement the **View.OnCLickListener** interface. If you have added the above line in your **onCreate* method you'll see a red curly line under the **this** reference. Move your cursor on the **this** keyword and press **alt-enter**. Select the second option. You are then prompted to implement the **onClick** method, which is just what we need
+What we are saying here is that our **MainActivity** should implement the **View.OnCLickListener** interface. If you have added the above line in your **onCreate** method you'll see a red curly line under the **this** reference. Move your cursor on the **this** keyword and press **alt-enter**. Select the second option. You are then prompted to implement the **onClick** method, which is just what we need
 
 ![Android Studio quick-fix](img/as-quick-fix.png)
 
