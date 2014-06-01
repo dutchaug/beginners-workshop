@@ -48,7 +48,7 @@ However, your application might also want to perform some action, such as send a
 For example, if you want to allow the user to send an email message, you can create the following intent:
 
 ```java
-Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:info@dutchaug.org"+));
+Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:info@dutchaug.org"));
 intent.putExtra(Intent.EXTRA_SUBJECT, "Hi there!");
 intent.putExtra(Intent.EXTRA_TEXT, "This is the e-mail body");
 startActivity(Intent.createChooser(intent, "Send mail..."));
@@ -65,14 +65,14 @@ startActivity(Intent.createChooser(intent, "Send mail..."));
 1. Click on the TODO Tool View double click on the `TODO Exercise 03.01` item.
 1. Implement the following code: 
   * Retrieve the e-mail address and subject from their EditText views.
-  * Create an _explicit_ intent to the **SecondActivity** and pass the retrieved e-mail address and -subject in an intent extra.
+  * Create an _explicit_ intent and use intent extras to pass the retrieved e-mail address and -subject to that intent. Start the **SecondActivity** and provide it with the intent just created.
 1. Click on the TODO Tool View double click on the `TODO Exercise 03.02` item.
 1. Implement the following code: 
   * Retrieve the e-mail message from the **EditText** view.
-  * Create an implicit intent to send an e-mail and pass the retrieved e-mail address, subject and message in an intent extra.
+  * Create an _implicit_ intent to send an e-mail and pass the retrieved e-mail address, subject and message in an intent extra.
 1. On the command line type `adb shell dumpsys activity` and try to interpret the output.
   
 > Notice that you don't need any special permissions to use implicit intents to chain another activity to task. You are basically leaving the end user in control of how and what will be done with their data. They can simply cancel the e-mail composition by pressing the back button. If you want to send e-mail directly from your app, without user intervention you must at least request the [INTERNET](http://developer.android.com/reference/android/Manifest.permission.html#INTERNET) persmission and do all the SMTP preparing and sending yourself. [Here](http://mobiledevtuts.com/android/android-sdk-smtp-email-tutorial/)'s a tutorial which uses [JavaMail for Android](https://code.google.com/p/javamail-android/) to achieve this task.
 
 ##Conclusion
-Using _implicit_ and _explicit_ **Intents** wisely will transform your app into an efficient way to perform a certain **Task**. Don't invent the wheel if somebody else, or a system activity can do this step in the task for you! On to [lesson 4](../section4/README.md) where you will learn about a very frequenlty used **View** the **ListView**.
+Using _implicit_ and _explicit_ **Intents** wisely will transform your app into an efficient way to perform a certain **Task**. Don't reinvent the wheel if somebody else, or a system activity can do this step in the task for you! On to [lesson 4](../section4/README.md) where you will learn about a very frequenlty used **View** the **ListView**.
