@@ -74,5 +74,39 @@ startActivity(Intent.createChooser(intent, "Send mail..."));
   
 > Notice that you don't need any special permissions to use implicit intents to chain another activity to task. You are basically leaving the end user in control of how and what will be done with their data. They can simply cancel the e-mail composition by pressing the back button. If you want to send e-mail directly from your app, without user intervention you must at least request the [INTERNET](http://developer.android.com/reference/android/Manifest.permission.html#INTERNET) persmission and do all the SMTP preparing and sending yourself. [Here](http://mobiledevtuts.com/android/android-sdk-smtp-email-tutorial/)'s a tutorial which uses [JavaMail for Android](https://code.google.com/p/javamail-android/) to achieve this task.
 
+## Additional Exercise
+Now we are going to change the flow of the application. FirstActivity will show the email address, subject, message and a button to send the email. SecondActivity will show a big EditText view and a 'ready' button which will send the entered message back to the FirstActivity.
+
+1. Add EditText below to the activity_first.xml
+
+```xml
+  <EditText
+        android:id="@+id/email_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="3"
+        android:focusable="false"
+        android:layout_marginBottom="12dp"
+        android:hint="@string/email_message" />
+```  
+
+2. Add an onClickListener for the email message and open SecondActivity. Use the code below.
+
+```java
+Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+startActivityForResult(intent, 12345);
+```
+
+3. Move the functionality for sending the email from the SecondActivity to the onclick of the button of the FirstActivity.
+
+4. Change the SecondActivity in such a way that it will return the entered message to the FirstActivity. To enable this add the following code to the onClickListener of the button.
+
+```java
+Intent intent = new Intent();
+intent.putExtra("message", mEmailMessage.getText().toString());
+setResult(12345, intent);
+finish();
+```
+
 ##Conclusion
 Using _implicit_ and _explicit_ **Intents** wisely will transform your app into an efficient way to perform a certain **Task**. Don't reinvent the wheel if somebody else, or a system activity can do this step in the task for you! On to [lesson 4](../section4/README.md) where you will learn about a very frequenlty used **View** the **ListView**.
