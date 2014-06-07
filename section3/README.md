@@ -75,9 +75,9 @@ startActivity(Intent.createChooser(intent, "Send mail..."));
 > Notice that you don't need any special permissions to use implicit intents to chain another activity to task. You are basically leaving the end user in control of how and what will be done with their data. They can simply cancel the e-mail composition by pressing the back button. If you want to send e-mail directly from your app, without user intervention you must at least request the [INTERNET](http://developer.android.com/reference/android/Manifest.permission.html#INTERNET) persmission and do all the SMTP preparing and sending yourself. [Here](http://mobiledevtuts.com/android/android-sdk-smtp-email-tutorial/)'s a tutorial which uses [JavaMail for Android](https://code.google.com/p/javamail-android/) to achieve this task.
 
 ## Additional Exercise
-Now we are going to change the flow of the application. FirstActivity will show the email address, subject, message and a button to send the email. SecondActivity will show a big EditText view and a 'ready' button which will send the entered message back to the FirstActivity.
+In this additional exercise we are going to change the flow of the application. FirstActivity will show the email address, subject, message and a button to send the email. SecondActivity will show a big EditText view and a 'ready' button which will send the entered message back to the FirstActivity.
 
-1. Add EditText below to the activity_first.xml
+1. Add an EditText view to activity_first.xml which will show just three lines of the email message.
 
 ```xml
   <EditText
@@ -90,16 +90,16 @@ Now we are going to change the flow of the application. FirstActivity will show 
         android:hint="@string/email_message" />
 ```  
 
-2. Add an onClickListener for the email message and open SecondActivity. Use the code below.
+1. When the EditText view with the email message is clicked we want to open the SecondActivity. To accomplish this add an OnClickListener to the message view and open the SecondActivity screen with the code below.
 
 ```java
 Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
 startActivityForResult(intent, 12345);
 ```
 
-3. Move the functionality for sending the email from the SecondActivity to the onclick of the button of the FirstActivity.
+1. Move the functionality for sending the email from the SecondActivity to the onclick of the button of the FirstActivity.
 
-4. Change the SecondActivity in such a way that it will return the entered message to the FirstActivity. To enable this add the following code to the onClickListener of the button.
+1. Change the onClick method of the SecondActivity so it will return the provided email message to the FirstActivity. Use the code below.
 
 ```java
 Intent intent = new Intent();
