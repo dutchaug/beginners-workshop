@@ -77,7 +77,7 @@ startActivity(Intent.createChooser(intent, "Send mail..."));
 ## Additional Exercise
 In this additional exercise we are going to change the flow of the application. FirstActivity will show the email address, subject, message and a button to send the email. SecondActivity will show a big EditText view and a 'ready' button which will send the entered message back to the FirstActivity.
 
-* Add an EditText view activity_first.xml which will show just three lines of the email message.
+* Add an EditText view to activity_first.xml which will show just three lines of the email message.
 
 ```xml
   <EditText
@@ -97,7 +97,7 @@ Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
 startActivityForResult(intent, 12345);
 ```
 
-* Move the functionality for sending the email from the onClick method of the SecondActivity to the onClick method of the FirstActivity. You will have to make little adjustments to the code.
+* Move the functionality for sending the email from the onClick method of the SecondActivity to the onClick method of the FirstActivity. You will have to make some little adjustments to the code.
 
 * Change the onClick method of the SecondActivity so it will return the provided email message back to the FirstActivity. Use the code below.
 
