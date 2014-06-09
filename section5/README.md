@@ -71,7 +71,7 @@ public class AnimalFragment extends Fragment {
 }
 ```
 
-The `fragment_image.xml` file is already present and contains a sinlge **ImageView** element:
+The `fragment_image.xml` file is already present and contains a single **ImageView** element:
 ```xml
 <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
            android:layout_width="match_parent"
