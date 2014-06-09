@@ -10,12 +10,12 @@
 If you know all about the learning goals for this lesson move on to [lesson 5](../section5/README.md)
 
 ## Introduction
-One of the most frequently used views in Android apps is the [**ListView**](http://developer.android.com/guide/topics/ui/layout/listview.html). It's also one of the more complex views and can become pretty cumbersome to work with if you don't play by the rules. Lists can be huge and its child views can be complex. If you don't _do it the right way_ you might experience a bad performing scroll or other odd behaviour. We hope to give you a solid introduction to good use of this powerful view.
+One of the most frequently used views in Android apps is the [**ListView**](http://developer.android.com/guide/topics/ui/layout/listview.html). It's also one of the more complex views and can become pretty cumbersome to work with if you don't play by the rules. Lists can be huge and its child views can be complex. If you don't _do it the right way_ your users might experience a bad performing scroll or other odd behaviour. We hope to give you a solid introduction to good use of this powerful view.
 
 ## Adding a ListView to your layout.
-A **ListView** usually displays a (large, if not huge) list of things which you can vertically scroll. The **ListView** only holds the amount of list item plus or minus a couple more in memory. Every time you scroll, the views that scroll out of view are recycled and reused for the views that are scrolling into view. 
+A **ListView** usually displays a (large, if not huge) list of things which you can vertically scroll. The **ListView** only holds the amount of list item plus or minus a couple more in memory. Every time you scroll, the views that scroll out of view are _recycled_ and reused for the views that are scrolling into view. 
 
-The _things_ in the list can have a custom view layout themselves. For the first example we'll simply use one of the standard layouts which you can find in the android runtime library itself. It's the layout with id `android.R.layout.simple_list_item_1`. It's a very simple layout with just one **TextView** with id `@android:id/text1`
+The _things_ in the list can have a custom view layout themselves. For the first example we'll simply use one of the standard layouts which you can find in the Android runtime library itself. It's the layout with id `android.R.layout.simple_list_item_1`. It's a very simple layout with just one **TextView** with id `@android:id/text1`
 
 > Press `Cmd-Shift-O` on a Mac or `Ctrl-Shift-N` on a Windows/Linux machine to open the **go to file** prompt. Simply type `simple_list_item_1` in the search field. Click on one of the items you see to view this systems layout file's contents.
 
@@ -73,9 +73,9 @@ Okay, a list with Strings is kind of nice as an example, but what about a list w
 
 How do we go about creating that?
 
-> You can read through the next steps or even better, follow along and do all the steps yourself! 
+> You can read through the next steps or even better, toss away the existing CustomAdapter.java file and follow along and do all the steps yourself! 
 
-Create a new class with name `MyCustomAdapter` which extends the **BaseAdapter** class. Android Studio will immediately show you something is wrong by red underlining the class definition. Hover your mouse over the red curly line to see what's wrong.
+Create a new class with name `CustomAdapter` which extends the **BaseAdapter** class. Android Studio will immediately show you something is wrong by red underlining the class definition. Hover your mouse over the red curly line to see what's wrong.
 
 ![Somethings's wrong with our custom adapter](img/somethings_wrong.png)
 
@@ -101,7 +101,7 @@ if (convertView == null) {
 }
 ```
 
-The `mContext` field is something you normally initialize in your custom adapter constructor. (Sometimes people initialize a **LayoutInflater&& as a field in the constructor as well.)
+The `mContext` field is something you normally initialize in your custom adapter constructor. (Sometimes people initialize a **LayoutInflater** as a field in the constructor as well.)
 
 ```java
 public CustomAdapter(Context context) {
@@ -136,7 +136,7 @@ The **ListView** and extending the **BaseAdapter** are powerful tools to create 
 * It is highly adviced to use the [ViewHolder pattern](http://developer.android.com/training/improving-layouts/smooth-scrolling.html#ViewHolder) for better performance. 
 * At some point in time you might want to add [sections to your list view](http://cyrilmottier.com/2011/07/05/listview-tips-tricks-2-section-your-listview/) or
 * show [multiple views types in your list](http://antew.com/?p=162).
-* If you work with databases you will probably start extending the [**CursorAdapter**](http://developer.android.com/reference/android/widget/CursorAdapter.html) and you should definitely investiga the [**Loaders** pattern](http://developer.android.com/guide/components/loaders.html) for _asynchronously_ loading the data and automatically updating the list when items in the database change.
+* If you work with databases you will probably start extending the [**CursorAdapter**](http://developer.android.com/reference/android/widget/CursorAdapter.html) and you should definitely investigate the [**Loaders** pattern](http://developer.android.com/guide/components/loaders.html) for _asynchronously_ loading the data and automatically updating the list when items in the database change.
 
 On to [lesson 5](../section5/README.md) where you will learn about **Fragments**, the **ViewPager** UI pattern and playing sounds with the **MediaPlayer**.
 
