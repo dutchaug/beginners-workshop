@@ -53,7 +53,7 @@ This workshop is aimed at the intermediate Java or OO programmer who wants to st
 
 ![Android Studio Check for updates](img/android-studio-check-for-updates.png)
 
-* After you have installed **Android Studio** you might need to update to the latest version (v0.5.2 was the latest end of March 2014)
+* After you have installed **Android Studio** you might need to update to the latest version (v0.6.0 was the latest half June 2014). Click on “Android Studio” on a Mac or in the “File” menu on Windows and Linux and select “Check for Updates…”
 * Fire up Android Studio and check that you have the latest **Tools**, **Android platform** and *Extras** installed. You can access the SDK manager by clicking on the SDK Manager Icon ![SDK Manager Icon](img/sdk-manager-studio.png) in the toolbar. Your configuration should look something like this
 
 ![SDK Tools](img/sdk-tools.png)
@@ -67,6 +67,16 @@ This workshop is aimed at the intermediate Java or OO programmer who wants to st
 
 * If you have selected all the packages above click the “Install Packages” button and sit tight.
 * Preferably we would like you to connect your phone to your computer and run and test the samples on a real device. If you don't own an Android device you can install an Android emulator, also known as an Android Virtual Device (AVD). Install at least one Android Virtual Device (AVD) running Jelly Bean, but preferably KitKat, for this workshop. All the capabilities of the AVD Manager are accessible directly from the Android Studio interface. Click the AVD Manager Icon ![AVD Manager Icon](img/avd-manager-studio.png) in the toolbar to open it and create new AVDs. **Note: If you connect your Android device to a Windows machine make sure you have installed the correct device driver for your Android device. If you have ever successfully connected your Android device to your PC you probably already have it.**
+
+##Connecting your device to Android Studio
+
+Preferably we would like you to connect your phone to your computer and run and test the samples on a real device. If you don't own an Android device you can install an Android emulator, also known as an Android Virtual Device (AVD). Install at least one Android Virtual Device (AVD) running Jelly Bean, but preferably KitKat, for this workshop. All the capabilities of the AVD Manager are accessible directly from the Android Studio interface. Click the AVD Manager Icon  in the toolbar to open it and create new AVDs.
+
+![USB Debugging](img/usb-debugging.png)
+> If you want to run apps on your device the first thing you need to do is enable **USB debugging** on the device itself (by starting the Settings app on your device and selecting **Developer Options | USB Debugging**). If you don't see the developer options item in your settings menu and you are running Android 4.0 (Ice Cream Sandwich) or higher you can enable them by clicking on the **Settings | About Phone | Build** item a couple of times to enable them. If you run an older Android version the USB Debugging checkbox might reside in the Applications section of your settings. 
+
+![Unknown Sources](img/unknown-sources.png)
+You must also allow installation of apps from sources other than the Play Store by checking Unknown Sources in the security settings (on most phones). Now it’s simply a matter of plugging in your phone and running the Android application by clicking the run button in Android Studio
 
 If you've installed all the necessary development kits described above you are all set for the workshop!
 
