@@ -70,9 +70,13 @@ This workshop is aimed at the intermediate Java or OO programmer who wants to st
 
 ##Connecting your device to Android Studio
 
+### USB Debugging
+
 ![USB Debugging](img/usb-debugging.png)
 
 If you want to run apps on your device the first thing you need to do is enable **USB debugging** on the device itself (by starting the Settings app on your device and selecting **Developer Options | USB Debugging**). If you don't see the developer options item in your settings menu and you are running Android 4.0 (Ice Cream Sandwich) or higher you can enable them by clicking on the **Settings | About Phone | Build** item a couple of times to enable them. If you run an older Android version the USB Debugging checkbox might reside in the Applications section of your settings. 
+
+### Unknown Sources
 
 ![Unknown Sources](img/unknown-sources.png)
 
