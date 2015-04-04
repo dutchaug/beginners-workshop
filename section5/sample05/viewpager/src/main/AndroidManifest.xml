@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="org.dutchaug.workshop.beginners.viewpager">
 
-    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19"/>
-
     <!-- The android:allowBackup="true" attribute indicates whether to allow the application to participate in the backup
          and restore infrastructure. If this attribute is set to false, no backup or restore of the application will ever
          be performed, even by a full-system backup that would otherwise cause all application data to be saved via adb.
