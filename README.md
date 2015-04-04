@@ -1,6 +1,8 @@
 #Android Workshop for Beginners
 
-Thanks for your interest in this Android Workshop for Beginners! This page is heads-up what the workshop is all about and to lay out the prerequisites 
+Thanks for signing up for the Android Workshop for Beginners workshop! 
+
+This page is heads-up what the workshop is all about and to lay out the prerequisites 
 to setup your Android development environment.
 
 ## What you _will_ learn in this workshop
@@ -44,23 +46,23 @@ to setup your Android development environment.
 This workshop is aimed at the intermediate Java or OO programmer who wants to start with native Android development. As a prerequisite we ask you to setup a working Android development environment. Please check if you have already installed (if not download and install) the following software on your computer:
 
 * A [Git](http://git-scm.com/downloads) client or command line tool to clone this repository. [Sourcetree](http://www.sourcetreeapp.com/) is a pretty cool Git GUI client.
-* A [Java Software Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/index.html) version 6 on a Mac or version 6 or 7 if you are using a Windows or Linux machine. I advice against using JDK 8 for this workshop. A Java Runtime Environment (JRE) is not enough!
+* A [Java Software Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/index.html), version 7 is recommended. We advice against using JDK 8 for this workshop. On a Mac you need a Java Runtime Environment (JRE) version 6 to be able to run Android Studio. Note: A Java Runtime Environment (JRE) is not enough to do Android development, you need that Java SDK!
 * The [Android Studio](http://developer.android.com/sdk/installing/studio.html) bundle, which includes: 
-  * The Android Studio early access preview IDE, which is based on the community edition of IntelliJ IDEA. 
+  * The Android Studio IDE, which is based on the community edition of IntelliJ IDEA. 
   * All the Android SDK Tools to design, test, debug, and profile your app. 
   * The latest Android platform to compile your app. 
   * The latest Android system image to run your app in the emulator
 
 ![Android Studio Check for updates](img/android-studio-check-for-updates.png)
 
-* After you have installed **Android Studio** you might need to update to the latest version (v0.6.0 was the latest half June 2014). Click on “Android Studio” on a Mac or in the “File” menu on Windows and Linux and select “Check for Updates…”
+* After you have installed **Android Studio** you might need to update to the latest version. Click on “Android Studio” on a Mac or in the “File” menu on Windows and Linux and select “Check for Updates…”. We advise to use version 1.1.0 of Android Studio for this workshop.
 * Fire up Android Studio and check that you have the latest **Tools**, **Android platform** and *Extras** installed. You can access the SDK manager by clicking on the SDK Manager Icon ![SDK Manager Icon](img/sdk-manager-studio.png) in the toolbar. Your configuration should look something like this
 
 ![SDK Tools](img/sdk-tools.png)
 > You only need the latest versions of the **Tools**, **Platform-tools** and **Build-tools**
 
-![Android 4.4.2 API 19](img/sdk-android-api-19.png)
-> Simply click the checkbox before the **Android 4.4.2 (API 19)** folder to select everything
+![Android 4.4.2 API 19](img/sdk-android-api-22.png)
+> Simply click the checkbox before the **Android 5.1 (API 22)** folder to select everything
 
 ![Extras](img/sdk-extras.png)
 > Again, if you have the hard disk space, simply install everything in the **Extras** section for the workshop. FYI The **Google USB Driver** is only compatible with Windows machines. So install that if you run Android Studio on windows and want to connect your dev phone via a USB cable.
