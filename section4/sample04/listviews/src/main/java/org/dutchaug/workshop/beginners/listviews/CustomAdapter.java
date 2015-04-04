@@ -71,7 +71,7 @@ public class CustomAdapter extends BaseAdapter {
         if (convertView == null) {
             LayoutInflater layoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             // If you have created your own custom layout you can replace it here
-            convertView = layoutInflater.inflate(R.layout.custom_layout, null, false);
+            convertView = layoutInflater.inflate(R.layout.custom_layout, parent, false);
         }
 
         ImageView imageView = (ImageView) convertView.findViewById(R.id.thumbnail_image);
