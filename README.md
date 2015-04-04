@@ -62,7 +62,7 @@ This workshop is aimed at the intermediate Java or OO programmer who wants to st
 > You only need the latest versions of the **Tools**, **Platform-tools** and **Build-tools**
 
 ![Android 4.4.2 API 19](img/sdk-android-api-22.png)
-> Simply click the checkbox before the **Android 5.1 (API 22)** folder to select everything
+> Simply click the checkbox before the **Android 5.1.1 (API 22)** folder to select everything
 
 ![Extras](img/sdk-extras.png)
 > Again, if you have the hard disk space, simply install everything in the **Extras** section for the workshop. FYI The **Google USB Driver** is only compatible with Windows machines. So install that if you run Android Studio on windows and want to connect your dev phone via a USB cable.
