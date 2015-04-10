@@ -13,7 +13,7 @@ If you know all about the learning goals for this lesson move on to [lesson 2](.
 ## Android Studio
 
 ### Importing an Android project in Android Studio
-Android Studio contains a new project wizard which is started by chosing **File > New Project...**. However convenient it also poses a lot of questions, settings and steps which might be a bit too overwhelming at this point. For this workshop we would like to teach you how to import an existing Android project so we can keep the project contents consise to what is needed in the sample or exercise. In this lesson we are going to import a very tiny "Hello World" app. Before we do this please clone this **beginners-workshop** Github repository to your local machine by typing `git clone git@github.com:dutchaug/beginners-workshop.git` in an empty folder.
+Android Studio contains a new project wizard which is started by chosing **File > New Project...**. However convenient it also presents you with a lot of questions, settings and steps which might be a bit too overwhelming at this point. For this workshop we would like to teach you how to import an existing Android project so we can keep the project contents consise to what is needed in the sample or exercise. In this lesson we are going to import a very tiny "Hello World" app. Before we do this please clone this **beginners-workshop** Github repository to your local machine by typing `git clone git@github.com:dutchaug/beginners-workshop.git` in an empty folder.
 
 In Android Studio, chose **File > Import Project...** 
 
@@ -47,15 +47,15 @@ If you have imported the **sample01** project successfully you will end up with 
 ![Typical Android Gradle project structure](img/project-structure.png)
 
 #### Gradle build files
-Android apps are written in the Java programming language. The Android SDK tools compile your code—along with any data and resource files—into an APK: an Android package, which is an archive file with an `.apk` suffix. One APK file contains all the contents of an Android app and is the file that Android-powered devices use to install the app.
+Android apps are written in the Java programming language. The Android SDK tools compile your code—along with any data and resource files and packages it into an APK-file, an Android package file, which is a ZIP archive file with an `.apk` suffix. The APK file contains all the files which make up an Android app and is the file that Android-powered devices use to install your app on your user's Android device.
 
-At the root of the project folder you can see various gradle files. You can use [command line tools](http://developer.android.com/tools/building/building-cmdline.html), [Ant](http://ant.apache.org/), [Maven](http://maven.apache.org/) and [Gradle](http://www.gradle.org/) to build and package your Android projects into these APK files which you can install on your Android device directly or sign and upload to the [Google Play Store](https://play.google.com/apps/publish/). The Android Tools team have chosen the highly flexible [Gradle](http://www.gradle.org/) build system as the main Android build system. You can read more about the new build system [here](http://tools.android.com/tech-docs/new-build-system). 
+In the Gradle Scripts section you can see various gradle files. You can use [command line tools](http://developer.android.com/tools/building/building-cmdline.html), [Ant](http://ant.apache.org/), [Maven](http://maven.apache.org/) and [Gradle](http://www.gradle.org/) to build and package your Android projects into these APK files which you can install on your Android device directly or sign and upload to the [Google Play Store](https://play.google.com/apps/publish/). The Android Tools team have chosen the highly flexible [Gradle](http://www.gradle.org/) build system as the default Android build system. You can read more about the new build system [here](http://tools.android.com/tech-docs/new-build-system). 
 
 The **build.gradle**, **gradle.properties** and **settings.gradle** files describe how to build the helloworld project.
 
-* The [**settings.gradle**](sample01/settings.gradle) file describes which sub-projects to include. This is only the **helloworld** project folder in our case
+* The [**settings.gradle**](sample01/settings.gradle) file describes which sub-projects to include. This is only the **helloworld** project folder in our case, but you can imagine that with larger projects you end up isolating re-usable code in sub-projects.
 * The [**build.gradle**](sample01/build.gradle) file in the root folder describes the necessary dependencies for the build itself and a common setup for all projects
-* The [**helloworld/build.gradle**](sample01/helloworld/build.gradle) describes how to build our Android project. It applies an android plugin and describes the configuration.
+* The [**helloworld/build.gradle**](sample01/helloworld/build.gradle) describes how to build the helloworld Android app. It applies an android plugin and describes the build configuration.
 
 The **gradlew** and **gradlew.bat** scripts (for unix resp. Windows environments) are gradle _wrapper_ scripts. You can run a build on the command line using this script. It requires a certain Gradle version and if it is not present it downloads the binaries on the fly. The **gradlew** scripts and **gradle** directory are added automatically when you create a project with the Android Studio New Project Wizard.
 
@@ -93,15 +93,15 @@ Total time: 5.702 secs
 The **build.gradle** file in the helloworld directory is very simple.
 
 ```
-apply plugin: 'android'
+apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion "19.1.0"
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 19
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
     }
@@ -112,7 +112,7 @@ dependencies {
 }
 ```
 
-The first line says to apply the Android Gradle plugin for this build, whereafter (with the code block preceded by the word 'android') we immediately configure this plugin with the Android Domain Specific Language (DSL). [More info](http://tools.android.com/tech-docs/new-build-system/user-guide)
+The first line says to apply the Android application plugin for this build, whereafter (with the code block preceded by the word 'android') we immediately configure this plugin with the Android Domain Specific Language (DSL). [More info](http://tools.android.com/tech-docs/new-build-system/user-guide)
 
 The **minSdkVersion** version states which Android OS level you minimally support with your app. We have chosen to support version 14 (Android 4.0 - Ice Cream Sandwich) and up in this workshop.
 
@@ -182,7 +182,7 @@ The manifest file presents essential information about your app to the Android s
 * It names the Java **package** for the application. The package name serves as a unique identifier for the application.
 * It describes the components of the application (in our example the activity MainActivity) and under what conditions they can be launched.
 * It declares which permissions the application must have in order to access protected parts of the API and interact with other applications. We don't require any extra permissions in our app, but if you e.g. need internet access, or want to lookup a contact you need to declare those permission here. [More info](http://developer.android.com/reference/android/Manifest.permission.html)
-* It declares the minimum level of the Android API that the application requires. In our case this information is not present in our development AndroidManifest.xml file, but it will be added in the Gradle build, using the information in the **defaultConfig** section in the ./hellworld/build.gradle file.
+* It declares the minimum level of the Android API that the application requires. In our case this information is not present in our development AndroidManifest.xml file, but it will be added in the Gradle build, using the information in the **defaultConfig** section in the ./helloworld/build.gradle file.
 
 [More info](http://developer.android.com/guide/topics/manifest/manifest-intro.html)
 
@@ -218,20 +218,20 @@ public class MainActivity extends Activity {
 
 The **onCreate** method is one of the _Activity Life Cycle_ methods (more on that in [section2](../section2)). In plain English, when our activity is created (by the Android system) we don't do anything with the saved instance state (whatever that is, we simply propagate it up to our super class) and set the content view layout to **R.layout.activity_main**.
 
-**R.layout.activity_main** refers to an integer in a generated class with name **R**. Go ahead, open `R.java` and see what's inside. See anything familiar? Browse around the **res** folder, which probably will ring some bells. In short Android keeps references of all the resources in the **res** directory and saves references to these files as public static final integers in the R.java file. Again, this file is generated, so don't change anything in this file directly, change the file name (or their contents) in the **res** directory instead.
+**R.layout.activity_main** refers to an integer in a generated class with name **R**. Go ahead, open `R.java` and see what's inside. See anything familiar? Browse around the **res** folder. See something familiar? Android keeps references of all the resources in the **res** directory and saves references to these files as public static final integers in the R.java file. Again, this file is generated, so don't change anything in this file directly, change the file name (or its contents) in the **res** directory instead.
 
 #### Resources
 ![res folder](img/res-folder.png)
 > The Android project resources
 
-A resource is a localized text string, bitmap, video, soundbit or other small piece of non-code information that your program needs. At build time all your resources get compiled into your application. This is useful for internationalization and for supporting multiple device types.
+A resource is a localized text string, bitmap, video, soundbite or other small piece of non-code information that your program needs. At build time all your resources get compiled into your application. This is useful for internationalization and for supporting multiple device types.
 
-You will create and store your resources in the res directory inside your project. The Android resource compiler (aapt) processes resources according to which subfolder they are in and the format of the file. For example, PNG and JPG format bitmaps should go in a directory starting with res/drawable, and XML files that describe screen layouts should go in a directory starting with res/layout. You can add suffixes for particular languages, screen orientations, pixel densities, and more.
+You store your resources in the res directory inside your project. The Android resource compiler (aapt) processes resources according to which subfolder they are in and the format of the file. For example, PNG and JPG format bitmaps should go in a directory starting with res/drawable, and XML files that describe screen layouts should go in a directory starting with res/layout. You can add suffixes for particular languages, screen orientations, pixel densities, and more.
 
 The resource compiler compresses and packs your resources and then generates a class named R that contains identifiers you use to reference those resources in your program. This is a little different from standard Java resources, which are referenced by key strings. Doing it this way allows Android to make sure all your references are valid and saves space by not having to store all those resource keys.
 
 ##### Resource quantifiers
-You might have noticed there are several **drawable** directories with different suffixes. These suffixes are called _qualifiers_ and narrow down for which devices these resources should be used. In the drawable case, all the default drawables go into the **drawable** directory directory. Any optimized images for e.g. a high density (hdpi), medium density (mdpi) or extra high density (xhdpi) screen go into the **drawable-hdpi**, **drawable-mdpi** and **drawable-xhdpi** directories respectively. Drawables in these directories _override_ any drawables in less specific / qualified directories. [More info](http://developer.android.com/guide/practices/screens_support.html)
+You might have noticed there are several **drawable** directories with different suffixes. These suffixes are called _qualifiers_ and narrow down for which devices these resources should be used. All the default drawables go into the **drawable** directory directory. Any optimized images for e.g. a high density (hdpi), medium density (mdpi) or extra high density (xhdpi) screen go into the **drawable-hdpi**, **drawable-mdpi** and **drawable-xhdpi** directories respectively. Drawables in these directories _override_ any drawables in less specific / qualified directories. [More info](http://developer.android.com/guide/practices/screens_support.html)
 
 ##### Localization resources
 In the **res/values** directory we see a **strings.xml** file. This file contains one _string-resource_ with name `app_name`.
@@ -239,7 +239,7 @@ In the **res/values** directory we see a **strings.xml** file. This file contain
 Suppose that your application's default language is English. Suppose also that you want to localize all the text in your application to Dutch. In this case, you could create an alternative strings.xml files, stored in a locale-specific resource directory:
 
 * **res/values/strings.xml** Contains English text for all the strings that the application uses, including text for a string named `app_name`.
-* **res/values-nl/strings.xml** Contain Dutch text for all the strings.
+* **res/values-nl/strings.xml** Contains Dutch text for all the strings you want to override. In other words, you don't need to override all the strings. If, for example, the `app_name` is the same in any language you only have to define it once in the **res/values/strings.xml** file.
 
 [More info](http://developer.android.com/guide/topics/resources/localization.html)
 
@@ -262,7 +262,7 @@ We already saw a reference to **R.layout.activity_main** in the **onCreate** met
 </LinearLayout>
 ```
 
->The most used method to describe User Interfaces in Android is XML. There's nothing holding you back in creating UIs in code directly, but there are two main reasons why XML is prefferred in most cases.
+>The most used method to define User Interfaces in Android is XML. There's nothing holding you back in creating UIs in code directly, but there are two main reasons why XML is preferred in most cases:
 >
 >1. **Separation Of Concerns (SOC)** - Defining your UI in xml helps you separate the UI from the code that controls its behavior.
 >2. **Resource qualifiers** - Storing different layout XML files in different (qualified) resource directories is a powerful tool to create different user experiences for different device types. The most simple case is a default UI in the **res/layout** directory and e.g. a _landscape_ version of your UI in the **res/layout-land** directory!
@@ -296,7 +296,7 @@ Some parameters are common to all layouts:
 </shape>
 ```
 
-> Creating [shape drawables](http://developer.android.com/guide/topics/resources/drawable-resource.html#Shape) (as they are called) in XML is a very powerful tool in Android! [This on-line tool](http://angrytools.com/gradient/) can create these gradient XML files for you. Simply click the **Android** tab at the bottom to get the generated XML.
+> Creating [shape drawables](http://developer.android.com/guide/topics/resources/drawable-resource.html#Shape) (as they are called) in XML is a very powerful tool in Android. [This on-line tool](http://angrytools.com/gradient/) can create gradient XML files for you. Simply click the **Android** tab at the bottom to get the generated XML.
 
 ##Conclusion
 This simple hello world app is only scratching the surface of what Android can do, but it gives you great insight in how Android Studio works. On to [lesson 2](../section2/README.md) where you will learn more about Activities and the Activity Life Cycle, more Views and how to interact with these Views in your code.
